@@ -1,0 +1,135 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "有限会社 板岡工作所" [ref=e5] [cursor=pointer]:
+        - /url: http://ita-kou.localtest/
+        - img "有限会社 板岡工作所" [ref=e6]
+      - button "メニューを開く" [ref=e7] [cursor=pointer]
+  - main [ref=e10]:
+    - heading "CONTACT お問い合わせ" [level=1] [ref=e13]:
+      - generic [ref=e14]: CONTACT
+      - generic [ref=e15]: お問い合わせ
+    - generic [ref=e17]:
+      - paragraph [ref=e18]: 以下のフォームに必要事項を入力してください。
+      - separator [ref=e19]
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - term [ref=e23]:
+              - generic [ref=e24]: お問い合わせ内容
+              - generic [ref=e25]: "*"
+            - definition [ref=e26]:
+              - list [ref=e27]:
+                - listitem [ref=e28]:
+                  - generic [ref=e29] [cursor=pointer]:
+                    - checkbox "ご相談" [ref=e30]
+                    - generic [ref=e32]: ご相談
+                - listitem [ref=e33]:
+                  - generic [ref=e34] [cursor=pointer]:
+                    - checkbox "採用について" [ref=e35]
+                    - generic [ref=e37]: 採用について
+                - listitem [ref=e38]:
+                  - generic [ref=e39] [cursor=pointer]:
+                    - checkbox "見積もり依頼" [ref=e40]
+                    - generic [ref=e42]: 見積もり依頼
+                - listitem [ref=e43]:
+                  - generic [ref=e44] [cursor=pointer]:
+                    - checkbox "その他" [ref=e45]
+                    - generic [ref=e47]: その他
+              - paragraph [ref=e48]: ※営業メールはご遠慮ください。
+          - generic [ref=e49]:
+            - term [ref=e50]:
+              - text: 会社名
+              - generic [ref=e51]: （法人の場合）
+            - definition [ref=e52]:
+              - textbox "会社名" [ref=e53]
+          - generic [ref=e54]:
+            - term [ref=e55]:
+              - text: 氏名
+              - generic [ref=e56]: "*"
+            - definition [ref=e57]:
+              - textbox "氏名" [ref=e58]
+          - generic [ref=e59]:
+            - term [ref=e60]:
+              - text: フリガナ
+              - generic [ref=e61]: "*"
+            - definition [ref=e62]:
+              - textbox "フリガナ" [ref=e63]
+          - generic [ref=e64]:
+            - term [ref=e65]:
+              - text: メールアドレス
+              - generic [ref=e66]: "*"
+            - definition [ref=e67]:
+              - textbox "メールアドレス" [ref=e68]
+          - generic [ref=e69]:
+            - term [ref=e70]: 電話番号
+            - definition [ref=e71]:
+              - textbox "電話番号" [ref=e72]:
+                - /placeholder: 日中繋がりやすい電話番号を記載ください。
+          - generic [ref=e73]:
+            - term [ref=e74]: 住所
+            - definition [ref=e75]:
+              - generic [ref=e76]:
+                - generic [ref=e77]: 〒
+                - textbox [ref=e78]
+              - textbox "住所" [ref=e79]
+              - textbox [ref=e80]
+        - separator [ref=e81]
+        - generic [ref=e82]:
+          - term [ref=e83]:
+            - text: ご相談内容の詳細
+            - generic [ref=e84]:
+              - text: どんなことでも結構です。
+              - text: 自由に記載して下さい。
+          - definition [ref=e85]:
+            - textbox "ご相談内容の詳細" [ref=e86]
+        - generic [ref=e88] [cursor=pointer]:
+          - checkbox "プライバシーポリシー を確認しました。" [ref=e89]
+          - generic [ref=e91]:
+            - link "プライバシーポリシー" [ref=e92]:
+              - /url: http://ita-kou.localtest/privacy-policy/
+            - text: を確認しました。
+        - button "内容を確認する" [ref=e94] [cursor=pointer]
+  - contentinfo [ref=e95]:
+    - generic [ref=e96]:
+      - generic [ref=e97]:
+        - link "有限会社 板岡工作所" [ref=e98] [cursor=pointer]:
+          - /url: http://ita-kou.localtest/
+          - img "有限会社 板岡工作所" [ref=e99]
+        - generic [ref=e100]:
+          - paragraph [ref=e101]: 有限会社 板岡工作所
+          - paragraph [ref=e102]:
+            - text: 〒651-2114 兵庫県神戸市西区今寺36-11
+            - link "Google Map" [ref=e103] [cursor=pointer]:
+              - /url: https://www.google.com/maps?q=兵庫県神戸市西区今寺36-11
+        - navigation "フッターナビゲーション" [ref=e104]:
+          - list [ref=e105]:
+            - listitem [ref=e106]:
+              - link "TOP" [ref=e107] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/
+                - text: TOP
+            - listitem [ref=e109]:
+              - link "業務内容" [ref=e110] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/services/
+                - text: 業務内容
+            - listitem [ref=e112]:
+              - link "設備紹介" [ref=e113] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/facilities/
+                - text: 設備紹介
+            - listitem [ref=e115]:
+              - link "会社情報" [ref=e116] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/company/
+                - text: 会社情報
+            - listitem [ref=e118]:
+              - link "採用情報" [ref=e119] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/recruitment/
+                - text: 採用情報
+        - link "お問い合わせフォーム" [ref=e122] [cursor=pointer]:
+          - /url: http://ita-kou.localtest/contact/
+          - text: お問い合わせフォーム
+      - generic [ref=e124]:
+        - link "プライバシーポリシー" [ref=e125] [cursor=pointer]:
+          - /url: http://ita-kou.localtest/privacy-policy/
+        - generic [ref=e126]: Copyright © ITAOKA KOSAKUSHO CO., LTD.
+        - link "ページ上部へ戻る" [ref=e127] [cursor=pointer]:
+          - /url: "#top"

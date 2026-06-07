@@ -1,0 +1,175 @@
+@use "../global" as *;
+
+/* ===============================================
+# facilities コンテンツ（設備ギャラリー：メイン＋サムネ3列・クリック切替）
+=============================================== */
+.facilities {
+  padding-block: rem(62) rem(60);
+
+  @include mq("md") {
+    padding-block: rem(187) rem(150);
+  }
+}
+
+.facilities__inner {
+  max-width: rem(500);
+  margin-inline: auto;
+  padding-inline: var(--padding-inline);
+
+  @include mq("md") {
+    max-width: rem(1062);
+  }
+}
+
+/* 各設備 */
+.facility:not(:first-child) {
+  margin-top: rem(48);
+
+  @include mq("md") {
+    margin-top: rem(177);
+  }
+}
+
+.facility__label {
+  color: var(--main-navy);
+  font-size: rem(14);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+
+  @include mq("md") {
+    font-size: rem(22);
+  }
+}
+
+.facility__name {
+  margin-top: rem(4);
+  color: var(--main-navy);
+  font-size: rem(18);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.45;
+
+  @include mq("md") {
+    font-size: rem(36);
+    margin-top: rem(8);
+  }
+}
+
+.facility__size {
+  margin-top: rem(2);
+  color: var(--main-navy);
+  font-size: rem(17);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+
+  @include mq("md") {
+    font-size: rem(29);
+  }
+}
+
+/* ギャラリー */
+.facility__gallery {
+  margin-top: rem(20);
+
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+/* メイン画像枠（contain・上下余白で余白感を統一） */
+.facility__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 315 / 240;
+  padding-block: rem(25);
+  padding-inline: rem(25);
+  border: 1px solid var(--ink);
+
+  @include mq("md") {
+    aspect-ratio: 1002 / 665;
+    padding-block: rem(52);
+    padding-inline: rem(40);
+  }
+}
+
+/* 白背景画像は上下余白を狭く（少し大きく見せる） */
+.facility__main.is-white {
+  padding-block: rem(16);
+
+  @include mq("md") {
+    padding-block: rem(32);
+  }
+}
+
+.facility__main-img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* サムネ（3列グリッド） */
+.facility__thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: rem(8);
+  margin-top: rem(16);
+
+  @include mq("md") {
+    gap: rem(15);
+  }
+}
+
+.facility__thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 100 / 76;
+  padding: rem(6);
+  border: 1px solid var(--ink);
+  cursor: pointer;
+  transition: border-color var(--duration-base);
+
+  @include mq("md") {
+    aspect-ratio: 325 / 210;
+    padding: rem(20);
+  }
+}
+
+/* 選択中サムネは太枠 */
+.facility__thumb.is-active {
+  border-width: 2px;
+
+  @include mq("md") {
+    border-width: 4px;
+  }
+}
+
+.facility__thumb img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* 画像なし設備リスト（09-11） */
+.facility-list {
+  margin-top: rem(62);
+  border-top: 1px solid var(--ink);
+
+  @include mq("md") {
+    margin-top: rem(177);
+  }
+}
+
+.facility-list__item {
+  padding-block: rem(22);
+  border-bottom: 1px solid var(--ink);
+
+  @include mq("md") {
+    padding-block: rem(38);
+  }
+}

@@ -1,0 +1,73 @@
+@use "../global" as *;
+
+/* ===============================================
+# 共通ボタン（詳しく見る / く字矢印は border 描画）
+# 見た目のみ定義（余白は使用側で付与）
+=============================================== */
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: rem(191);
+  max-width: 100%;
+  min-height: rem(42);
+  padding-block: rem(6);
+  padding-inline: rem(36);
+  background-color: var(--main-navy);
+  border: 1px solid var(--main-navy);
+  color: var(--white);
+  font-size: rem(12.36);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.14em;
+  text-indent: 0.14em;
+  text-align: center;
+  transition: background-color var(--duration-base), color var(--duration-base), border-color var(--duration-base);
+  @include mq("md") {
+    min-width: rem(278);
+    min-height: rem(62);
+    padding-inline: rem(50);
+    font-size: rem(18);
+  }
+}
+
+/* く字矢印（正方形を border-top+right で作り 45deg 回転＝">"） */
+.button__arrow {
+  position: absolute;
+  top: 50%;
+  right: rem(20);
+  width: rem(12);
+  height: rem(12);
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  transform: translateY(-50%) rotate(45deg);
+
+  @include mq("md") {
+    right: rem(29);
+    width: rem(17);
+    height: rem(17);
+  }
+}
+
+/* ホバー：色反転（navy ⇄ white） */
+@media (any-hover: hover) {
+  .button:hover {
+    background-color: var(--white);
+    color: var(--main-navy);
+  }
+}
+
+/* グレー modifier（bg #ccc / 文字・矢印 #231815、ホバーで ink 反転） */
+.button--gray {
+  background-color: var(--gray);
+  border-color: var(--gray);
+  color: var(--ink);
+}
+
+@media (any-hover: hover) {
+  .button--gray:hover {
+    background-color: var(--ink);
+    border-color: var(--ink);
+    color: var(--white);
+  }
+}

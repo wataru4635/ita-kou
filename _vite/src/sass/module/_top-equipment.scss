@@ -1,0 +1,138 @@
+@use "../global" as *;
+
+/* ===============================================
+# top-equipment（全幅背景＋機械画像＋設備紹介テキスト）
+=============================================== */
+.top-equipment {
+  position: relative;
+  overflow: hidden;
+  padding-block: rem(70) rem(48);
+
+  @include mq("md") {
+    padding-block: rem(113) rem(90);
+  }
+}
+
+/* 背景画像（透明度は画像に焼込済み＝CSS opacity なし） */
+.top-equipment__bg-img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.top-equipment__inner {
+  position: relative;
+  z-index: 1;
+  max-width: rem(500);
+  margin-inline: auto;
+  padding-inline: var(--padding-inline);
+
+  @include mq("md") {
+    max-width: rem(1320);
+    display: grid;
+    grid-template-columns: 587fr 577fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "machines head"
+      "machines body";
+    column-gap: rem(92);
+    align-items: start;
+  }
+}
+
+/* 見出し */
+.top-equipment__head {
+  @include mq("md") {
+    grid-area: head;
+    padding-top: rem(63);
+  }
+}
+
+/* 見出しラッパー（div）。色は jp/en 両方へ継承させるためラッパーに持たせる */
+.top-equipment__title {
+  color: var(--main-navy);
+}
+
+/* タイポグラフィは __title-jp（h2）側に持たせる（h2 既定の font-size/weight を上書き） */
+.top-equipment__title-jp {
+  font-size: rem(34);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+
+  @include mq("md") {
+    font-size: rem(55);
+  }
+}
+
+.top-equipment__title-en {
+  display: block;
+  margin-top: rem(10);
+  font-size: rem(13);
+  font-weight: var(--font-weight-light);
+  line-height: 1.2;
+
+  @include mq("md") {
+    margin-top: rem(2);
+    font-size: rem(36);
+  }
+}
+
+/* 機械画像（PC左・SP中段） */
+.top-equipment__machines {
+  margin-block: rem(12) rem(28);
+
+  @include mq("md") {
+    grid-area: machines;
+    margin-block: 0;
+  }
+}
+
+.top-equipment__machines img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 本文ブロック */
+.top-equipment__body {
+  @include mq("md") {
+    grid-area: body;
+  }
+}
+
+.top-equipment__lead {
+  font-size: rem(18);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.5;
+
+  @include mq("md") {
+    margin-top: rem(85);
+    font-size: rem(36);
+  }
+}
+
+.top-equipment__text {
+  margin-top: rem(20);
+  font-size: rem(12);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.83;
+
+  @include mq("md") {
+    margin-top: rem(35);
+    font-size: rem(14);
+    line-height: 1.93;
+  }
+}
+
+.top-equipment__btn {
+  margin-top: rem(44);
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(79);
+    text-align: left;
+  }
+}

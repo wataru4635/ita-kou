@@ -1,0 +1,141 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "有限会社 板岡工作所" [ref=e5] [cursor=pointer]:
+        - /url: http://ita-kou.localtest/
+        - img "有限会社 板岡工作所" [ref=e6]
+      - button "メニューを開く" [ref=e7] [cursor=pointer]
+  - main [ref=e10]:
+    - heading "FACILITIES 設備紹介" [level=1] [ref=e13]:
+      - generic [ref=e14]: FACILITIES
+      - generic [ref=e15]: 設備紹介
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - paragraph [ref=e22]: FACILITIES 01
+          - heading "オークマV920EX" [level=2] [ref=e23]
+        - generic [ref=e24]:
+          - img "オークマV920EX" [ref=e26]
+          - list [ref=e27]:
+            - listitem [ref=e28] [cursor=pointer]
+            - listitem [ref=e29] [cursor=pointer]
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - paragraph [ref=e32]: FACILITIES 02
+          - heading "MULTUS B300II" [level=2] [ref=e33]
+        - generic [ref=e34]:
+          - img "MULTUS B300II" [ref=e36]
+          - list [ref=e37]:
+            - listitem [ref=e38] [cursor=pointer]
+            - listitem [ref=e39] [cursor=pointer]
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - paragraph [ref=e42]: FACILITIES 03
+          - heading "オークマLB3000EX（複合機）" [level=2] [ref=e43]
+        - generic [ref=e44]:
+          - img "オークマLB3000EX（複合機）" [ref=e46]
+          - list [ref=e47]:
+            - listitem [ref=e48] [cursor=pointer]
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - paragraph [ref=e51]: FACILITIES 04
+          - heading "オークマMB-66VB（マシニングセンター）" [level=2] [ref=e52]
+        - generic [ref=e53]:
+          - img "オークマMB-66VB（マシニングセンター）" [ref=e55]
+          - list [ref=e56]:
+            - listitem [ref=e57] [cursor=pointer]
+            - listitem [ref=e58] [cursor=pointer]
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - paragraph [ref=e61]: FACILITIES 05
+          - heading "オークマLB35II-M（複合機）" [level=2] [ref=e62]
+          - paragraph [ref=e63]: 460φ×2000L
+        - generic [ref=e64]:
+          - img "オークマLB35II-M（複合機）" [ref=e66]
+          - list [ref=e67]:
+            - listitem [ref=e68] [cursor=pointer]
+            - listitem [ref=e69] [cursor=pointer]
+      - generic [ref=e70]:
+        - generic [ref=e71]:
+          - paragraph [ref=e72]: FACILITIES 06
+          - heading "オークマLB4000EX（複合機）" [level=2] [ref=e73]
+          - paragraph [ref=e74]: 480φ×1500L
+        - generic [ref=e75]:
+          - img "オークマLB4000EX（複合機）" [ref=e77]
+          - list [ref=e78]:
+            - listitem [ref=e79] [cursor=pointer]
+            - listitem [ref=e80] [cursor=pointer]
+            - listitem [ref=e81] [cursor=pointer]
+      - generic [ref=e82]:
+        - generic [ref=e83]:
+          - paragraph [ref=e84]: FACILITIES 07
+          - heading "オークマLH35N" [level=2] [ref=e85]
+          - paragraph [ref=e86]: 610φ×2000L
+        - generic [ref=e87]:
+          - img "オークマLH35N" [ref=e89]
+          - list [ref=e90]:
+            - listitem [ref=e91] [cursor=pointer]
+            - listitem [ref=e92] [cursor=pointer]
+            - listitem [ref=e93] [cursor=pointer]
+      - generic [ref=e94]:
+        - generic [ref=e95]:
+          - paragraph [ref=e96]: FACILITIES 08
+          - heading "オークマLB300M（複合機）" [level=2] [ref=e97]
+          - paragraph [ref=e98]: 340φ×1000L
+        - generic [ref=e99]:
+          - img "オークマLB300M（複合機）" [ref=e101]
+          - list [ref=e102]:
+            - listitem [ref=e103] [cursor=pointer]
+      - list [ref=e104]:
+        - listitem [ref=e105]:
+          - paragraph [ref=e106]: FACILITIES 09
+          - heading "池貝A25旋盤（500φ×1500L）" [level=2] [ref=e107]
+        - listitem [ref=e108]:
+          - paragraph [ref=e109]: FACILITIES 10
+          - heading "池貝A20旋盤（500φ×1100L）" [level=2] [ref=e110]
+        - listitem [ref=e111]:
+          - paragraph [ref=e112]: FACILITIES 11
+          - heading "鋸盤" [level=2] [ref=e113]
+  - contentinfo [ref=e114]:
+    - generic [ref=e115]:
+      - generic [ref=e116]:
+        - link "有限会社 板岡工作所" [ref=e117] [cursor=pointer]:
+          - /url: http://ita-kou.localtest/
+          - img "有限会社 板岡工作所" [ref=e118]
+        - generic [ref=e119]:
+          - paragraph [ref=e120]: 有限会社 板岡工作所
+          - paragraph [ref=e121]:
+            - text: 〒651-2114 兵庫県神戸市西区今寺36-11
+            - link "Google Map" [ref=e122] [cursor=pointer]:
+              - /url: https://www.google.com/maps?q=兵庫県神戸市西区今寺36-11
+        - navigation "フッターナビゲーション" [ref=e123]:
+          - list [ref=e124]:
+            - listitem [ref=e125]:
+              - link "TOP" [ref=e126] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/
+                - text: TOP
+            - listitem [ref=e128]:
+              - link "業務内容" [ref=e129] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/services/
+                - text: 業務内容
+            - listitem [ref=e131]:
+              - link "設備紹介" [ref=e132] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/facilities/
+                - text: 設備紹介
+            - listitem [ref=e134]:
+              - link "会社情報" [ref=e135] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/company/
+                - text: 会社情報
+            - listitem [ref=e137]:
+              - link "採用情報" [ref=e138] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/recruitment/
+                - text: 採用情報
+        - link "お問い合わせフォーム" [ref=e141] [cursor=pointer]:
+          - /url: http://ita-kou.localtest/contact/
+          - text: お問い合わせフォーム
+      - generic [ref=e143]:
+        - link "プライバシーポリシー" [ref=e144] [cursor=pointer]:
+          - /url: http://ita-kou.localtest/privacy-policy/
+        - generic [ref=e145]: Copyright © ITAOKA KOSAKUSHO CO., LTD.
+        - link "ページ上部へ戻る" [ref=e146] [cursor=pointer]:
+          - /url: "#top"

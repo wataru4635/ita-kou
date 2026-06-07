@@ -1,0 +1,293 @@
+@use "../global" as *;
+/* ===============================================
+# フェードアニメーション：IntersectionObserver＆GSAP用
+=============================================== */
+
+/* フェード */
+.js-fade-in {
+  opacity: 0;
+  transition: opacity var(--duration-scroll) ease;
+  
+  &.is-active {
+    opacity: 1;
+  }
+}
+
+/* 上方向にスライド */
+.js-fade-up {
+  opacity: 0;
+  translate: 0 20px;
+  transition: opacity var(--duration-scroll) ease-in-out, translate var(--duration-scroll) ease-in-out;
+  
+  &.is-active {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* 左方向にスライド */
+.js-slide-left {
+  opacity: 0;
+  translate: -20px 0;
+  transition: opacity var(--duration-scroll) ease, translate var(--duration-scroll) ease;
+  
+  &.is-active {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.js-slide-right {
+  opacity: 0;
+  translate: 10px 0;
+  transition: opacity var(--duration-scroll) ease-in-out, translate var(--duration-scroll) ease-in-out;
+  
+  &.is-active {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* 下方向にスライド */
+.js-fade-down {
+  opacity: 0;
+  translate: 0 -20px;
+  transition: opacity var(--duration-scroll) ease, translate var(--duration-scroll) ease;
+  
+  &.is-active {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* 右方向にスライド */
+.js-slide-right {
+  opacity: 0;
+  translate: 10px 0;
+  transition: opacity var(--duration-scroll) ease, translate var(--duration-scroll) ease;
+  @include mq('md') {
+    translate: 20px 0;
+  }
+  &.is-active {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.js-scaleImg {
+  overflow: hidden;
+  img {
+    scale: 1.05;
+    transition: scale var(--duration-scroll-emphasis) ease-in-out, opacity var(--duration-scroll-emphasis) ease-in-out;
+    opacity: 0;
+    will-change: scale, opacity;
+  }
+  &.is-active img {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+////////////////////
+// 遅延時間の指定
+////////////////////
+
+:root {
+  --delay-1: 0.1s;
+  --delay-2: 0.2s;
+  --delay-3: 0.3s;
+  --delay-4: 0.4s;
+  --delay-5: 0.5s;
+}
+
+.--delay-1 {
+  transition-delay: var(--delay-1);
+}
+
+.--delay-2 {
+  transition-delay: var(--delay-2);
+}
+
+.--delay-3 {
+  transition-delay: var(--delay-3);
+}
+
+.--delay-4 {
+  transition-delay: var(--delay-4);
+}
+
+.--delay-5 {
+  transition-delay: var(--delay-5);
+}
+
+@media (max-width: 768px) {
+
+  .--delay-1,
+  .--delay-2,
+  .--delay-3,
+  .--delay-4 {
+    transition-delay: .0s;
+  }
+}
+
+/* ===============================================
+# 見出し：日本語を1文字ずつ表示（top-services / top-equipment）
+# wrapTextInSpans(".js-text-split") が各文字を <span style="--index"> に分割
+=============================================== */
+
+/* 日本語（h2）: 1文字ずつ stagger でスライドイン */
+.js-split-heading .js-text-split span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity var(--duration-scroll) ease-in-out, transform var(--duration-scroll) ease-in-out;
+  transition-delay: calc(0.05s * var(--index));
+  will-change: opacity, transform;
+  @include mq('md') {
+    transform: translateX(20px);
+  }
+}
+
+.js-split-heading.is-active .js-text-split span {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 英語（span）: 日本語の後にブロックでフェードイン */
+.js-split-heading .top-services__title-en,
+.js-split-heading .top-equipment__title-en {
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity var(--duration-scroll) ease-in-out, transform var(--duration-scroll) ease-in-out;
+  transition-delay: 0.3s;
+  will-change: opacity, transform;
+  @include mq('md') {
+    transform: translateX(20px);
+  }
+}
+
+.js-split-heading.is-active .top-services__title-en,
+.js-split-heading.is-active .top-equipment__title-en {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.js-top-services-slide-right {
+  opacity: 0;
+  translate: 10px 0;
+  transition: opacity var(--duration-scroll) ease-in-out, translate var(--duration-scroll) ease-in-out;
+  transition-delay: 0.3s;
+  will-change: opacity, translate;
+  @include mq('md') {
+    translate: 20px 0;
+  }
+  &.is-active {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.js-top-services-scale-img .top-services__img--top,
+.js-top-services-scale-img .top-services__img--bottom {
+  overflow: hidden;
+  img {
+    scale: 1.1;
+    transition: scale var(--duration-scroll-emphasis) ease-in-out, opacity var(--duration-scroll-emphasis) ease-in-out;
+    opacity: 0;
+    transition-delay: 0.2s;
+    will-change: scale, opacity;
+  }
+}
+
+.js-top-services-scale-img.is-active .top-services__img--top img,
+.js-top-services-scale-img.is-active .top-services__img--bottom img {
+  scale: 1;
+  opacity: 1;
+}
+
+.js-top-services-scale-img.is-active .top-services__img--bottom img {
+  transition-delay: 0.4s;
+}
+
+.js-top-equipment-scale-img {
+  overflow: hidden;
+  img {
+    translate: 10px 0;
+    transition: translate var(--duration-scroll-emphasis) ease-in-out, opacity var(--duration-scroll-emphasis) ease-in-out;
+    opacity: 0;
+    transition-delay: 0.2s;
+    will-change: translate, opacity;
+  }
+}
+
+.js-top-equipment-scale-img.is-active img {
+  translate: 0 0;
+  opacity: 1;
+}
+
+.js-top-equipment-slide-right {
+  opacity: 0;
+  translate: 10px 0;
+  transition: opacity var(--duration-scroll) ease-in-out, translate var(--duration-scroll) ease-in-out;
+  transition-delay: 0.3s;
+  will-change: opacity, translate;
+  @include mq('md') {
+    translate: 20px 0;
+  }
+  &.is-active {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.js-service-scale-img {
+  overflow: hidden;
+  img {
+    scale: 1.1;
+    transition: scale var(--duration-scroll-emphasis) ease-in-out, opacity var(--duration-scroll-emphasis) ease-in-out;
+    opacity: 0;
+    transition-delay: 0.2s;
+    will-change: scale, opacity;
+  }
+}
+
+.js-service-scale-img.is-active img {
+  scale: 1;
+  opacity: 1;
+}
+
+.js-service-slide-right {
+  & .service__label,
+  & .service__title {
+    opacity: 0;
+    translate: 10px 0;
+    transition: opacity var(--duration-scroll) ease-in-out, translate var(--duration-scroll) ease-in-out;
+    will-change: opacity, translate;
+    transition-delay: 0.1s;
+    @include mq('md') {
+      translate: 20px 0;
+    }
+  }
+  & .service__text {
+    opacity: 0;
+    translate: 10px 0;
+    transition: opacity var(--duration-scroll) ease-in-out, translate var(--duration-scroll) ease-in-out;
+    transition-delay: 0.2s;
+    will-change: opacity, translate;
+    @include mq('md') {
+      translate: 20px 0;
+    }
+  }
+}
+
+.js-service-slide-right.is-active {
+  & .service__label,
+  & .service__title {
+    opacity: 1;
+    translate: 0 0;
+  }
+  & .service__text {
+    opacity: 1;
+    translate: 0 0;
+  }
+}

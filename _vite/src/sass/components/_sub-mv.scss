@@ -1,0 +1,56 @@
+@use "../global" as *;
+
+/* ===============================================
+# sub-mv（下層ページ共通MV：見出し帯＋全幅画像）
+# 画像は比率そのまま（トリミングなし）。差異は modifier で対応。
+=============================================== */
+.sub-mv__head {
+  padding-top: rem(134);
+  padding-bottom: rem(31);
+  padding-inline: rem(34);
+
+  @include mq("md") {
+    padding-top: rem(187);
+    padding-bottom: rem(34);
+    padding-inline: rem(20);
+    max-width: rem(1190);
+    margin-inline: auto;
+  }
+}
+
+.sub-mv__title-en {
+  display: block;
+  color: var(--main-navy);
+  font-size: rem(37);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  @include mq("md") {
+    font-size: rem(69.27);
+  }
+}
+
+.sub-mv__title-ja {
+  display: block;
+  margin-top: rem(13);
+  font-size: rem(20);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+
+  @include mq("md") {
+    margin-top: rem(15);
+    font-size: rem(22);
+  }
+}
+
+.sub-mv__image-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* プライバシーポリシー：画像なし・見出しENはコンプ色（#03518F） */
+.sub-mv--privacy .sub-mv__title-en {
+  color: var(--privacy-blue);
+}

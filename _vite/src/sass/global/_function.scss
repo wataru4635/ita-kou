@@ -1,0 +1,30 @@
+@use "sass:math";
+@use "sass:meta";
+
+@function strip-unit($number) {
+  @if meta.type-of($number) == "number" and not math.is-unitless($number) {
+    @return math.div($number, $number * 0 + 1);
+  }
+  @return $number;
+}
+
+@function vw($window_width, $size) {
+	@return math.div($size, $window_width) * 100vw;
+}
+
+@function rem($pixels) {
+  @return math.div($pixels, 16) * 1rem;
+}
+
+@function myClamp($min, $max, $min-view-port: 320, $max-view-port: 1440) {
+  $variable-part: math.div($max - $min, $max-view-port - $min-view-port);
+  $constant: $max - $max-view-port * $variable-part;
+
+  $min-px: $min * 1px;
+  $max-px: $max * 1px;
+
+  $variable-px: $constant * 1px;
+  $variable-vw: 100 * $variable-part * 1vw;
+
+  @return clamp($min-px, $variable-px + $variable-vw, $max-px);
+}

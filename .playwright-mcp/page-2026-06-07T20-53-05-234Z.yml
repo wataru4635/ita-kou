@@ -1,0 +1,149 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "有限会社 板岡工作所" [ref=e5] [cursor=pointer]:
+        - /url: http://ita-kou.localtest/
+        - img "有限会社 板岡工作所" [ref=e6]
+      - button "メニューを開く" [ref=e7] [cursor=pointer]
+  - main [ref=e10]:
+    - heading "FACILITIES 設備紹介" [level=1] [ref=e13]:
+      - generic [ref=e14]: FACILITIES
+      - generic [ref=e15]: 設備紹介
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - paragraph [ref=e22]: FACILITIES 01
+          - heading "オークマV920EX" [level=2] [ref=e23]
+        - generic [ref=e24]:
+          - generic [ref=e25]:
+            - img "オークマV920EX"
+          - list [ref=e26]:
+            - listitem [ref=e27] [cursor=pointer]
+            - listitem [ref=e28] [cursor=pointer]
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - paragraph [ref=e31]: FACILITIES 02
+          - heading "MULTUS B300II" [level=2] [ref=e32]
+        - generic [ref=e33]:
+          - generic [ref=e34]:
+            - img "MULTUS B300II"
+          - list [ref=e35]:
+            - listitem [ref=e36] [cursor=pointer]
+            - listitem [ref=e37] [cursor=pointer]
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - paragraph [ref=e40]: FACILITIES 03
+          - heading "オークマLB3000EX（複合機）" [level=2] [ref=e41]
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - img "オークマLB3000EX（複合機）"
+          - list [ref=e44]:
+            - listitem [ref=e45] [cursor=pointer]
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - paragraph [ref=e48]: FACILITIES 04
+          - heading "オークマMB-66VB（マシニングセンター）" [level=2] [ref=e49]
+        - generic [ref=e50]:
+          - generic [ref=e51]:
+            - img "オークマMB-66VB（マシニングセンター）"
+          - list [ref=e52]:
+            - listitem [ref=e53] [cursor=pointer]
+            - listitem [ref=e54] [cursor=pointer]
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - paragraph [ref=e57]: FACILITIES 05
+          - heading "オークマLB35II-M（複合機）" [level=2] [ref=e58]
+          - paragraph [ref=e59]: 460φ×2000L
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - img "オークマLB35II-M（複合機）"
+          - list [ref=e62]:
+            - listitem [ref=e63] [cursor=pointer]
+            - listitem [ref=e64] [cursor=pointer]
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - paragraph [ref=e67]: FACILITIES 06
+          - heading "オークマLB4000EX（複合機）" [level=2] [ref=e68]
+          - paragraph [ref=e69]: 480φ×1500L
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - img "オークマLB4000EX（複合機）"
+          - list [ref=e72]:
+            - listitem [ref=e73] [cursor=pointer]
+            - listitem [ref=e74] [cursor=pointer]
+            - listitem [ref=e75] [cursor=pointer]
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - paragraph [ref=e78]: FACILITIES 07
+          - heading "オークマLH35N" [level=2] [ref=e79]
+          - paragraph [ref=e80]: 610φ×2000L
+        - generic [ref=e81]:
+          - generic [ref=e82]:
+            - img "オークマLH35N"
+          - list [ref=e83]:
+            - listitem [ref=e84] [cursor=pointer]
+            - listitem [ref=e85] [cursor=pointer]
+            - listitem [ref=e86] [cursor=pointer]
+      - generic [ref=e87]:
+        - generic [ref=e88]:
+          - paragraph [ref=e89]: FACILITIES 08
+          - heading "オークマLB300M（複合機）" [level=2] [ref=e90]
+          - paragraph [ref=e91]: 340φ×1000L
+        - generic [ref=e92]:
+          - generic [ref=e93]:
+            - img "オークマLB300M（複合機）"
+          - list [ref=e94]:
+            - listitem [ref=e95] [cursor=pointer]
+      - list [ref=e96]:
+        - listitem [ref=e97]:
+          - paragraph [ref=e98]: FACILITIES 09
+          - heading "池貝A25旋盤（500φ×1500L）" [level=2] [ref=e99]
+        - listitem [ref=e100]:
+          - paragraph [ref=e101]: FACILITIES 10
+          - heading "池貝A20旋盤（500φ×1100L）" [level=2] [ref=e102]
+        - listitem [ref=e103]:
+          - paragraph [ref=e104]: FACILITIES 11
+          - heading "鋸盤" [level=2] [ref=e105]
+  - contentinfo [ref=e106]:
+    - generic [ref=e107]:
+      - generic [ref=e108]:
+        - link "有限会社 板岡工作所" [ref=e109] [cursor=pointer]:
+          - /url: http://ita-kou.localtest/
+          - img "有限会社 板岡工作所" [ref=e110]
+        - generic [ref=e111]:
+          - paragraph [ref=e112]: 有限会社 板岡工作所
+          - paragraph [ref=e113]:
+            - text: 〒651-2114 兵庫県神戸市西区今寺36-11
+            - link "Google Map" [ref=e114] [cursor=pointer]:
+              - /url: https://www.google.com/maps?q=兵庫県神戸市西区今寺36-11
+        - navigation "フッターナビゲーション" [ref=e115]:
+          - list [ref=e116]:
+            - listitem [ref=e117]:
+              - link "TOP" [ref=e118] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/
+                - text: TOP
+            - listitem [ref=e120]:
+              - link "業務内容" [ref=e121] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/services/
+                - text: 業務内容
+            - listitem [ref=e123]:
+              - link "設備紹介" [ref=e124] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/facilities/
+                - text: 設備紹介
+            - listitem [ref=e126]:
+              - link "会社情報" [ref=e127] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/company/
+                - text: 会社情報
+            - listitem [ref=e129]:
+              - link "採用情報" [ref=e130] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/recruitment/
+                - text: 採用情報
+        - link "お問い合わせフォーム" [ref=e133] [cursor=pointer]:
+          - /url: http://ita-kou.localtest/contact/
+          - text: お問い合わせフォーム
+      - generic [ref=e135]:
+        - link "プライバシーポリシー" [ref=e136] [cursor=pointer]:
+          - /url: http://ita-kou.localtest/privacy-policy/
+        - generic [ref=e137]: Copyright © ITAOKA KOSAKUSHO CO., LTD.
+        - link "ページ上部へ戻る" [ref=e138] [cursor=pointer]:
+          - /url: "#top"

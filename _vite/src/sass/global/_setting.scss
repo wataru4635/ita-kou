@@ -1,0 +1,101 @@
+@use "sass:math";
+
+$inner: 1260px;
+
+$padding-pc: 35px;
+$padding-sp: 25px;
+
+:root {
+  --padding-inline: 1.875rem;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --padding-inline: 1.5rem;
+  }
+}
+
+////////////////////
+// フォント設定
+////////////////////
+
+:root {
+  --font-family-base: "Noto Sans JP", "Noto Sans", sans-serif;
+  --font-family-second: "Noto Serif JP", "Noto Serif", serif;
+}
+
+:root {
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+
+////////////////////
+// 色の指定
+////////////////////
+
+:root {
+  --black: #000;
+  --white: #fff;
+
+  --main-navy: #003894;
+  --privacy-blue: #03518f;
+  --required-red: #fd0000;
+
+  --ink: #231815;
+
+  --text-black: #000;
+
+  --gray: #cccccc;
+  --gray-text: #999999;
+  --bg-gray: #e9e8e9;
+  --border-gray: #707070;
+
+  --footer-bg: #333333;
+
+  --accent-yellow: #fcee21;
+
+  --body-bg: #ffffff;
+}
+
+////////////////////
+// z-index
+///////////////////
+
+:root {
+  --z-index-header: 100;
+  --z-index-to-top: 200;
+  --z-index-drawer: 1000;
+}
+
+////////////////////
+// レスポンシブ
+////////////////////
+
+:root {
+  --cq-ref-mobile: 375;
+  --cq-ref: 1440;
+}
+
+////////////////////
+// アニメーション設定
+///////////////////
+
+:root {
+  --duration-base: 0.3s;
+  --duration-emphasis: 0.5s;
+  --duration-scroll: 0.7s;
+  --duration-scroll-emphasis: 0.9s;
+  --ease-smooth-bounce: cubic-bezier(.48, .07, .33, .79);
+}
+
+////////////////////
+// bodyの指定
+////////////////////
+
+body {
+  color: var(--black);
+  font-family: var(--font-family-base);
+  background-color: var(--body-bg);
+}

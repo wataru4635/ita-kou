@@ -1,0 +1,61 @@
+- generic:
+  - banner [ref=e1]:
+    - generic [ref=e2]:
+      - heading "有限会社 板岡工作所" [level=1] [ref=e3]:
+        - link "有限会社 板岡工作所" [ref=e4] [cursor=pointer]:
+          - /url: http://ita-kou.localtest/
+          - img "有限会社 板岡工作所" [ref=e5]
+      - button "メニューを閉じる" [expanded] [active] [ref=e9] [cursor=pointer]
+      - generic [ref=e10]:
+        - generic [ref=e11]:
+          - link "有限会社 板岡工作所" [ref=e13] [cursor=pointer]:
+            - /url: http://ita-kou.localtest/
+            - img "有限会社 板岡工作所" [ref=e14]
+          - button "メニューを閉じる" [ref=e15] [cursor=pointer]
+        - navigation "モバイルナビゲーション" [ref=e16]:
+          - list [ref=e17]:
+            - listitem [ref=e18]:
+              - link "トップページ TOP" [ref=e19] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/
+                - generic [ref=e20]:
+                  - generic [ref=e21]: トップページ
+                  - generic [ref=e22]: TOP
+            - listitem [ref=e24]:
+              - link "業務内容 SERVICES" [ref=e25] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/services/
+                - generic [ref=e26]:
+                  - generic [ref=e27]: 業務内容
+                  - generic [ref=e28]: SERVICES
+            - listitem [ref=e30]:
+              - link "設備紹介 FACILITIES" [ref=e31] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/facilities/
+                - generic [ref=e32]:
+                  - generic [ref=e33]: 設備紹介
+                  - generic [ref=e34]: FACILITIES
+            - listitem [ref=e36]:
+              - link "会社情報 COMPANY" [ref=e37] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/company/
+                - generic [ref=e38]:
+                  - generic [ref=e39]: 会社情報
+                  - generic [ref=e40]: COMPANY
+            - listitem [ref=e42]:
+              - link "採用情報 RECRUITMENT" [ref=e43] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/recruitment/
+                - generic [ref=e44]:
+                  - generic [ref=e45]: 採用情報
+                  - generic [ref=e46]: RECRUITMENT
+            - listitem [ref=e48]:
+              - link "お問い合わせ CONTACT" [ref=e49] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/contact/
+                - generic [ref=e50]:
+                  - generic [ref=e51]: お問い合わせ
+                  - generic [ref=e52]: CONTACT
+            - listitem [ref=e54]:
+              - link "プライバシーポリシー PRIVACY POLICY" [ref=e55] [cursor=pointer]:
+                - /url: http://ita-kou.localtest/privacy-policy/
+                - generic [ref=e56]:
+                  - generic [ref=e57]: プライバシーポリシー
+                  - generic [ref=e58]: PRIVACY POLICY
+        - paragraph [ref=e60]: Copyright © ITAOKA KOSAKUSHO CO., LTD.
+  - main
+  - contentinfo

@@ -1,0 +1,56 @@
+@use "../global" as *;
+
+/* ===============================================
+# 404 Not Found（お問い合わせ完了などの下層メッセージ系トンマナに準拠）
+=============================================== */
+.not-found {
+  padding-block: rem(60) rem(80);
+  text-align: center;
+
+  @include mq("md") {
+    padding-block: rem(110) rem(140);
+  }
+}
+
+.not-found__inner {
+  max-width: rem(500);
+  margin-inline: auto;
+  padding-inline: var(--padding-inline);
+
+  @include mq("md") {
+    max-width: rem(800);
+  }
+}
+
+.not-found__title {
+  color: var(--main-navy);
+  font-size: rem(20);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.5;
+
+  @include mq("md") {
+    font-size: rem(28);
+  }
+}
+
+.not-found__text {
+  margin-top: rem(24);
+  font-size: rem(13);
+  font-weight: var(--font-weight-medium);
+  line-height: 2;
+
+  @include mq("md") {
+    margin-top: rem(32);
+    font-size: rem(15);
+  }
+}
+
+.not-found__btn {
+  margin-top: rem(40);
+  display: flex;
+  justify-content: center;
+
+  @include mq("md") {
+    margin-top: rem(56);
+  }
+}

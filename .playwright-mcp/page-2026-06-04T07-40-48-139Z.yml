@@ -1,0 +1,10 @@
+- generic [active]:
+  - banner [ref=e1]:
+    - generic [ref=e2]:
+      - heading "有限会社 板岡工作所" [level=1] [ref=e3]:
+        - link "有限会社 板岡工作所" [ref=e4] [cursor=pointer]:
+          - /url: http://ita-kou.localtest/
+          - img "有限会社 板岡工作所" [ref=e5]
+      - button "メニューを開く" [ref=e6] [cursor=pointer]
+  - main
+  - contentinfo

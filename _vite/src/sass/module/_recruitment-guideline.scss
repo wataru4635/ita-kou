@@ -1,0 +1,153 @@
+@use "../global" as *;
+
+/* ===============================================
+# recruitment-guideline（募集要項テーブル＋エントリーボタン）
+=============================================== */
+.recruitment-guideline {
+  padding-block: rem(40) rem(56);
+
+  @include mq("md") {
+    padding-block: rem(60) rem(83);
+  }
+}
+
+.recruitment-guideline__inner {
+  max-width: rem(500);
+  margin-inline: auto;
+  padding-inline: var(--padding-inline);
+
+  @include mq("md") {
+    max-width: rem(1265);
+  }
+}
+
+.recruitment-guideline__title {
+  color: var(--main-navy);
+  font-size: rem(18);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+
+  @include mq("md") {
+    font-size: rem(48);
+    text-align: center;
+  }
+}
+
+/* テーブル枠（PCのみ枠線・余白） */
+.guideline-table {
+  margin-top: rem(20);
+
+  @include mq("md") {
+    margin-top: rem(55);
+    padding-block: rem(95) rem(109);
+    padding-inline: rem(182) rem(128);
+    border: 1px solid var(--border-gray);
+  }
+}
+
+/* 応募職種ヘッダー（ink＋navy セル） */
+.guideline-table__head {
+  display: flex;
+  gap: rem(6);
+  margin-inline: calc(-1 * var(--padding-inline));
+
+  @include mq("md") {
+    margin-inline: rem(-60) 0;
+    gap: rem(26);
+  }
+}
+
+.guideline-table__head-term,
+.guideline-table__head-value {
+  display: flex;
+  align-items: center;
+  padding-block: rem(8);
+  color: var(--white);
+  font-size: rem(10);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+
+  @include mq("md") {
+    padding-block: rem(20);
+    font-size: rem(16);
+  }
+}
+
+.guideline-table__head-term {
+  flex-shrink: 0;
+  width: rem(110);
+  padding-inline: var(--padding-inline) rem(10);
+  background-color: var(--ink);
+
+  @include mq("md") {
+    width: rem(229);
+    padding-inline: rem(60);
+  }
+}
+
+.guideline-table__head-value {
+  flex: 1;
+  padding-inline: rem(17);
+  background-color: var(--main-navy);
+
+  @include mq("md") {
+    padding-inline: rem(32);
+  }
+}
+
+/* 本体（SP=縦積み / PC=2列） */
+.guideline-table__body {
+  margin-top: rem(24);
+
+  @include mq("md") {
+    margin-top: rem(27);
+  }
+}
+
+.guideline-row {
+  padding-block: rem(14) rem(16);
+  border-bottom: 0.5px solid var(--gray-text);
+
+  @include mq("md") {
+    display: flex;
+    align-items: flex-start;
+    padding-block: rem(12) rem(16);
+  }
+}
+
+.guideline-row__term {
+  font-size: rem(12);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.5;
+
+  @include mq("md") {
+    flex-shrink: 0;
+    width: rem(227);
+    font-size: rem(16);
+    line-height: 1.7;
+  }
+}
+
+.guideline-row__desc {
+  margin-top: rem(6);
+  font-size: rem(10);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.8;
+
+  @include mq("md") {
+    flex: 1;
+    margin-top: 0;
+    font-size: rem(16);
+    line-height: 1.5;
+  }
+}
+
+/* エントリーボタン */
+.recruitment-guideline__btn {
+  margin-top: rem(40);
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(83);
+  }
+}

@@ -1,0 +1,310 @@
+@use "../global" as *;
+
+/* ===============================================
+# フッター（bg #333 / PC横1段＋下段・SP縦積み）
+=============================================== */
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--white);
+}
+
+.footer__inner {
+  position: relative;
+  max-width: rem(1440);
+  margin-inline: auto;
+  padding-block: rem(18) rem(20);
+  padding-inline: rem(30);
+
+  @include mq("md") {
+    padding-block: rem(33) rem(16);
+    padding-inline: rem(120) rem(125);
+  }
+}
+
+/* ----------- メイン領域 ----------- */
+.footer__main {
+  display: flex;
+  flex-direction: column;
+
+  @include mq("md") {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* ロゴ */
+.footer__logo {
+  order: 2;
+  align-self: center;
+  margin-top: rem(36);
+  line-height: 0;
+
+  @include mq("md") {
+    order: 0;
+    align-self: auto;
+    margin-top: 0;
+  }
+}
+
+.footer__logo-img {
+  width: rem(283);
+  max-width: 100%;
+  height: auto;
+}
+
+/* 会社情報 */
+.footer__info {
+  order: 4;
+  margin-top: rem(22);
+
+  @include mq("md") {
+    order: 0;
+    margin-top: 0;
+  }
+}
+
+.footer__name,
+.footer__address {
+  font-size: rem(12);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.85;
+  letter-spacing: 0.02em;
+}
+
+.footer__address {
+  white-space: nowrap;
+
+  @include mq("md") {
+    white-space: normal;
+  }
+}
+
+.footer__map {
+  margin-left: rem(6);
+  border-bottom: 1px solid var(--white);
+  line-height: 1.2;
+}
+
+/* PC 縦罫線 */
+.footer__divider {
+  display: none;
+
+  @include mq("md") {
+    display: block;
+    width: 1px;
+    height: rem(51);
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+/* ----------- ナビ ----------- */
+.footer__nav {
+  order: 1;
+
+  @include mq("md") {
+    order: 0;
+  }
+}
+
+.footer__nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: rem(40);
+  font-size: rem(12);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+  @include mq("md") {
+    min-height: 0;
+    font-size: rem(13);
+    border-bottom: none;
+  }
+}
+
+/* SP ナビ矢印（白丸＋白chevron・CSS描画） */
+.footer__nav-arrow {
+  position: relative;
+  flex-shrink: 0;
+  width: rem(18);
+  height: rem(18);
+  border: 1px solid var(--white);
+  border-radius: 100%;
+}
+
+.footer__nav-arrow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 44%;
+  width: rem(5);
+  height: rem(5);
+  border-top: 1px solid var(--white);
+  border-right: 1px solid var(--white);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+@include mq("md") {
+  .footer__nav-items {
+    display: flex;
+    gap: rem(24);
+  }
+
+  .footer__nav-item--top {
+    display: none;
+  }
+
+  .footer__nav-arrow {
+    display: none;
+  }
+}
+
+/* ----------- お問い合わせボタン（高圧フランジ準拠） ----------- */
+.footer__contact {
+  order: 3;
+  align-self: center;
+  margin-top: rem(27);
+
+  @include mq("md") {
+    order: 0;
+    align-self: auto;
+    margin-top: 0;
+  }
+}
+
+.footer__contact-btn {
+  position: relative;
+  display: inline-block;
+  min-width: rem(221);
+  padding-block: rem(14);
+  padding-inline: rem(28) rem(40);
+  border-radius: rem(70);
+  background-color: var(--white);
+  color: var(--main-navy);
+  font-size: rem(15);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  transition: background-color var(--duration-base), color var(--duration-base);
+
+  @include mq("md") {
+    min-width: 0;
+    padding-block: rem(12);
+    font-size: rem(13);
+  }
+}
+
+.footer__contact-arrow {
+  position: absolute;
+  top: 50%;
+  right: rem(15);
+  width: rem(15);
+  height: rem(15);
+  transform: translateY(-50%);
+}
+
+.footer__contact-arrow img {
+  width: 100%;
+  height: 100%;
+  transition: filter var(--duration-base);
+}
+
+@media (any-hover: hover) {
+  .footer__contact-btn:hover {
+    @include mq("md") {
+      background-color: var(--main-navy);
+      color: var(--white);
+    }
+  }
+
+  .footer__contact-btn:hover .footer__contact-arrow img {
+    @include mq("md") {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
+/* ----------- トップへ戻る（PC=丸） ----------- */
+.footer__to-top {
+  display: none;
+
+  @include mq("md") {
+    position: absolute;
+    top: rem(45);
+    right: rem(44);
+    display: block;
+    line-height: 0;
+  }
+}
+
+.footer__to-top img {
+  width: rem(40);
+  height: auto;
+}
+
+@media (any-hover: hover) {
+  .footer__to-top:hover,
+  .footer__to-top-sp:hover,
+  .footer__logo:hover,
+  .footer__map:hover,
+  .footer__nav-link:hover,
+  .footer__privacy:hover {
+    opacity: 0.7;
+  }
+}
+
+/* ----------- 下段 ----------- */
+.footer__bottom {
+  position: relative;
+  margin-top: rem(14);
+  padding-top: rem(14);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+  @include mq("md") {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: rem(28);
+  }
+}
+
+.footer__privacy {
+  display: inline-block;
+  font-size: rem(10);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.04em;
+
+  @include mq("md") {
+    font-size: rem(12);
+  }
+}
+
+.footer__copyright {
+  display: block;
+  margin-top: rem(6);
+  font-size: rem(10);
+  font-weight: var(--font-weight-light);
+  letter-spacing: 0.04em;
+
+  @include mq("md") {
+    margin-top: 0;
+  }
+}
+
+/* トップへ戻る（SP=角・下段右） */
+.footer__to-top-sp {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  line-height: 0;
+
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.footer__to-top-sp img {
+  width: rem(23);
+  height: auto;
+}

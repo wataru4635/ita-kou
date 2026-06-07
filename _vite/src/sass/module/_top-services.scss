@@ -1,0 +1,153 @@
+@use "../global" as *;
+
+/* ===============================================
+# top-services（navy・左テキスト＋右に重ね写真2枚）
+=============================================== */
+.top-services {
+  overflow: visible;
+  padding-block: 0 rem(56);
+  background-color: var(--main-navy);
+  color: var(--white);
+
+  @include mq("md") {
+    overflow: hidden;
+    padding-block: rem(106) rem(148);
+  }
+}
+
+.top-services__inner {
+  max-width: rem(500);
+  margin-inline: auto;
+  padding-left: var(--padding-inline);
+  padding-right: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: rem(46);
+
+  @include mq("md") {
+    max-width: rem(1440);
+    flex-direction: row;
+    align-items: flex-start;
+    gap: rem(53);
+    padding-left: rem(35);
+  }
+}
+
+/* テキスト（PC左 / SP下） */
+.top-services__body {
+  padding-right: var(--padding-inline);
+
+  @include mq("md") {
+    max-width: rem(612);
+    margin-left: auto;
+    padding-top: rem(70);
+    padding-right: 0;
+  }
+}
+
+/* 見出しラッパー（div）。タイポグラフィは __title-jp（h2）側に持たせる */
+.top-services__title-jp {
+  font-size: rem(34);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+
+  @include mq("md") {
+    font-size: rem(55);
+  }
+}
+
+.top-services__title-en {
+  display: block;
+  margin-top: rem(4);
+  font-size: rem(13);
+  font-weight: var(--font-weight-light);
+  line-height: 1.2;
+
+  @include mq("md") {
+    font-size: rem(36);
+  }
+}
+
+.top-services__lead {
+  margin-top: rem(36);
+  font-size: rem(18);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.5;
+
+  @include mq("md") {
+    margin-top: rem(76);
+    font-size: rem(36);
+  }
+}
+
+.top-services__text {
+  margin-top: rem(20);
+  font-size: rem(12);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.83;
+
+  @include mq("md") {
+    margin-top: rem(26);
+    font-size: rem(14);
+    line-height: 1.93;
+    padding-right: rem(30);
+  }
+}
+
+.top-services__btn {
+  margin-top: rem(42);
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(47);
+    text-align: left;
+  }
+}
+
+/* 写真（PC右 / SP上）右寄せで重ね */
+.top-services__images {
+  position: relative;
+  margin-top: rem(-33.5);
+
+  @include mq("md") {
+    width: rem(657);
+    flex-shrink: 0;
+    margin-top: 0;
+  }
+}
+
+.top-services__img--top {
+  position: relative;
+  z-index: 1;
+  width: 48%;
+  margin-left: auto;
+
+  @include mq("md") {
+    width: 50%;
+  }
+}
+
+.top-services__img--bottom {
+  width: 97%;
+  margin-top: rem(-60);
+  margin-left: auto;
+
+  @include mq("md") {
+    width: 100%;
+    margin-top: rem(-121);
+  }
+}
+
+.top-services__img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.top-services__img--top img {
+  aspect-ratio: 328 / 410;
+}
+
+.top-services__img--bottom img {
+  aspect-ratio: 657 / 433;
+}

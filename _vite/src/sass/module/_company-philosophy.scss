@@ -1,0 +1,154 @@
+@use "../global" as *;
+
+/* ===============================================
+# company-philosophy（スローガン＋基本方針）
+# PC=白地・角丸枠箱 / SP=灰地・枠なし＋項目区切り
+=============================================== */
+.company-philosophy {
+  padding-block: rem(56) rem(56);
+  background-color: var(--bg-gray);
+
+  @include mq("md") {
+    padding-block: rem(60) rem(55);
+  }
+}
+
+.company-philosophy__inner {
+  max-width: rem(500);
+  margin-inline: auto;
+  padding-inline: var(--padding-inline);
+
+  @include mq("md") {
+    max-width: rem(1204);
+    padding-block: rem(51) rem(65);
+    padding-inline: rem(65);
+    border: 1px solid var(--black);
+    border-radius: rem(20);
+  }
+}
+
+/* 見出し（スローガン / 基本方針） */
+.company-philosophy__heading {
+  color: var(--main-navy);
+  font-size: rem(18);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+
+  @include mq("md") {
+    font-size: rem(36);
+  }
+}
+
+/* スローガン本文群 */
+.company-philosophy__slogan-title {
+  margin-top: rem(20);
+  font-size: rem(21);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+
+  @include mq("md") {
+    margin-top: rem(79);
+    font-size: rem(27);
+  }
+}
+
+.company-philosophy__lead {
+  margin-top: rem(16);
+  font-size: rem(14);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.7;
+
+  @include mq("md") {
+    margin-top: rem(12);
+    font-size: rem(16);
+    line-height: 1.625;
+  }
+}
+
+.company-philosophy__text {
+  margin-top: rem(20);
+  font-size: rem(12);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.83;
+
+  @include mq("md") {
+    margin-top: rem(12);
+    font-size: rem(14);
+    line-height: 1.714;
+  }
+}
+
+/* スローガン / 基本方針 間の区切り線 */
+.company-philosophy__divider {
+  margin-block: rem(30);
+  border: none;
+  border-top: 0.5px solid var(--ink);
+
+  @include mq("md") {
+    margin-block: rem(53) rem(44);
+    border-top: 0.25px solid var(--black);
+  }
+}
+
+/* 基本方針：3項目（品質 / 納期 / 環境） */
+.company-philosophy__items {
+  margin-top: rem(28);
+
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+.philosophy-item {
+  padding-bottom: rem(12);
+  border-bottom: 1px dashed var(--ink);
+
+  @include mq("md") {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.philosophy-item:not(:first-child) {
+  margin-top: rem(13);
+
+  @include mq("md") {
+    margin-top: rem(24);
+  }
+}
+
+.philosophy-item__term {
+  font-size: rem(19);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.5;
+
+  @include mq("md") {
+    font-size: rem(24);
+  }
+}
+
+.philosophy-item__desc {
+  margin-top: rem(4);
+  font-size: rem(12);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+
+  @include mq("md") {
+    margin-top: rem(9);
+    font-size: rem(16);
+  }
+}
+
+/* 基本方針の締め文 */
+.company-philosophy__statement {
+  margin-top: rem(28);
+  font-size: rem(12);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.83;
+
+  @include mq("md") {
+    margin-top: rem(30);
+    font-size: rem(14);
+    line-height: 1.714;
+  }
+}

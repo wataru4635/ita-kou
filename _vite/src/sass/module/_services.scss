@@ -1,0 +1,130 @@
+@use "../global" as *;
+
+/* ===============================================
+# services コンテンツ（4行・画像＋テキスト交互）
+# PC: 画像は外端に密着し 50vw で拡大、テキストは中央寄せで間隔一定（位置ほぼ固定）
+# SP: 画像インセット→テキスト縦積み
+=============================================== */
+.services {
+  overflow: hidden;
+  padding-block: rem(69) rem(44);
+
+  @include mq("md") {
+    padding-block: rem(163) rem(114);
+  }
+}
+
+.service {
+  padding-inline: rem(26);
+
+  @include mq("md") {
+    display: flex;
+    align-items: center;
+    padding-inline: 0;
+  }
+}
+
+.service--reverse {
+  @include mq("md") {
+    flex-direction: row-reverse;
+  }
+}
+
+.service:not(:first-child) {
+  margin-top: rem(82);
+
+  @include mq("md") {
+    margin-top: rem(170);
+  }
+}
+
+/* 画像 */
+.service__image {
+  @include mq("md") {
+    width: 50vw;
+    flex-shrink: 0;
+  }
+}
+
+.service__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 316.8 / 239.63;
+  object-fit: cover;
+
+  @include mq("md") {
+    aspect-ratio: 720.96 / 540.56;
+  }
+}
+
+/* テキスト */
+.service__body {
+  margin-top: rem(32);
+
+  @include mq("md") {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+  }
+}
+
+.service--reverse .service__body {
+  @include mq("md") {
+    justify-content: flex-end;
+  }
+}
+
+.service__body-inner {
+  @include mq("md") {
+    max-width: rem(601);
+    padding-left: rem(82);
+  }
+}
+
+.service--reverse .service__body-inner {
+  @include mq("md") {
+    padding-left: 0;
+    padding-right: rem(82);
+  }
+}
+
+.service__label {
+  color: var(--main-navy);
+  font-size: rem(14);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+
+  @include mq("md") {
+    font-size: rem(22);
+  }
+}
+
+.service__title {
+  margin-top: rem(6);
+  color: var(--main-navy);
+  font-size: rem(18);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+
+  @include mq("md") {
+    margin-top: rem(20);
+    font-size: rem(36);
+    line-height: 1.4;
+  }
+}
+
+.service__text {
+  margin-top: rem(17);
+  font-size: rem(12);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.83;
+
+  @include mq("md") {
+    margin-top: rem(17);
+    font-size: rem(14);
+    line-height: 1.93;
+  }
+}

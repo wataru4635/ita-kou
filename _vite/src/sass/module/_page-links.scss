@@ -1,0 +1,109 @@
+@use "../global" as *;
+
+/* ===============================================
+# page-links（会社情報 / 採用情報 カードリンク）
+# オーバーレイは画像に焼込済み＝疑似要素なし。カード全体が<a>。
+=============================================== */
+.page-links {
+  padding-block: rem(68) rem(20);
+  background-color: var(--footer-bg);
+
+  @include mq("md") {
+    padding-block: rem(15);
+  }
+}
+
+.page-links__list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(12);
+  margin-inline: auto;
+  padding-inline: rem(30);
+
+  @include mq("md") {
+    flex-direction: row;
+    gap: rem(14);
+    padding-inline: rem(14);
+  }
+}
+
+.page-links__item {
+  @include mq("md") {
+    flex: 1;
+  }
+}
+
+.page-links__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: rem(24);
+  aspect-ratio: 699 / 425;
+  overflow: hidden;
+
+  @include mq("md") {
+    padding-top: rem(89);
+  }
+}
+
+.page-links__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-base);
+}
+
+.page-links__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.page-links__title {
+  color: var(--white);
+  font-size: rem(28.28);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+
+  @include mq("md") {
+    font-size: rem(41);
+  }
+}
+
+.page-links__en {
+  display: block;
+  margin-top: rem(2);
+  color: var(--white);
+  font-size: rem(12);
+  font-weight: var(--font-weight-light);
+  letter-spacing: 0.05em;
+
+  @include mq("md") {
+    font-size: rem(25);
+  }
+}
+
+.page-links__btn {
+  margin-top: rem(20);
+
+  @include mq("md") {
+    margin-top: rem(43);
+  }
+}
+
+/* hover: 画像ズーム＋ボタン反転 */
+@media (any-hover: hover) {
+  .page-links__card:hover .page-links__bg {
+    transform: scale(1.05);
+  }
+
+  .page-links__card:hover .button {
+    background-color: var(--white);
+    color: var(--main-navy);
+  }
+}

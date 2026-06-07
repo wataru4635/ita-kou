@@ -1,0 +1,64 @@
+@use "../global" as *;
+
+/* ===============================================
+# recruitment-message（求める人物像：淡いグレー背景・中央テキスト＋ボタン2つ）
+=============================================== */
+.recruitment-message {
+  padding-block: rem(60) rem(48);
+  background-color: var(--bg-gray);
+
+  @include mq("md") {
+    padding-block: rem(175) rem(127);
+  }
+}
+
+.recruitment-message__inner {
+  max-width: rem(500);
+  margin-inline: auto;
+  padding-inline: var(--padding-inline);
+
+  @include mq("md") {
+    max-width: rem(1000);
+  }
+}
+
+.recruitment-message__title {
+  color: var(--main-navy);
+  font-size: rem(18);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+
+  @include mq("md") {
+    font-size: rem(48);
+    text-align: center;
+  }
+}
+
+.recruitment-message__text {
+  margin-top: rem(21);
+  font-size: rem(12);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.83;
+
+  @include mq("md") {
+    margin-top: rem(37);
+    font-size: rem(14);
+    line-height: 1.857;
+    text-align: center;
+  }
+}
+
+.recruitment-message__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(16);
+  margin-top: rem(40);
+
+  @include mq("md") {
+    flex-direction: row;
+    justify-content: center;
+    gap: rem(34);
+    margin-top: rem(117);
+  }
+}

@@ -1,0 +1,106 @@
+@use "../global" as *;
+
+/* ===============================================
+# privacy（プライバシーポリシー本文：見出し＋本文＋リストに分割）
+=============================================== */
+.privacy {
+  padding-block: rem(22) rem(40);
+
+  @include mq("md") {
+    padding-block: rem(95) rem(109);
+  }
+}
+
+.privacy__inner {
+  max-width: rem(500);
+  margin-inline: auto;
+  padding-inline: var(--padding-inline);
+
+  @include mq("md") {
+    max-width: rem(1058);
+  }
+}
+
+/* 本文・リード・リスト・締め（Medium）／見出し（Bold）共通の文字サイズ */
+.privacy__lead,
+.privacy__text,
+.privacy__list-item {
+  font-size: rem(12);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.667;
+
+  @include mq("md") {
+    font-size: rem(14);
+    line-height: 1.857;
+  }
+}
+
+.privacy__heading {
+  font-size: rem(12);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.667;
+
+  @include mq("md") {
+    font-size: rem(14);
+    line-height: 1.857;
+  }
+}
+
+/* ブロック間＝空行1つ分。見出し→本文は連続（margin 0） */
+.privacy__block {
+  margin-top: rem(20);
+
+  @include mq("md") {
+    margin-top: rem(26);
+  }
+}
+
+.privacy__text {
+  margin-top: 0;
+}
+
+/* 本文→リスト＝空行1つ分 */
+.privacy__list {
+  margin-top: rem(20);
+
+  @include mq("md") {
+    margin-top: rem(26);
+  }
+}
+
+.privacy__list-item {
+  display: flex;
+}
+
+.privacy__list-item::before {
+  content: "□";
+  flex-shrink: 0;
+  margin-right: rem(8);
+}
+
+/* お問合せ窓口の前は空行3つ分 */
+.privacy__block--contact {
+  margin-top: rem(48);
+
+  @include mq("md") {
+    margin-top: rem(78);
+  }
+}
+
+/* お問合せ窓口だけ、タイトル下に空行1つ分の余白（デザイン準拠・PC/SP共通） */
+.privacy__block--contact .privacy__text {
+  margin-top: rem(20);
+
+  @include mq("md") {
+    margin-top: rem(26);
+  }
+}
+
+/* 締めの段落 */
+.privacy__closing {
+  margin-top: rem(20);
+
+  @include mq("md") {
+    margin-top: rem(26);
+  }
+}

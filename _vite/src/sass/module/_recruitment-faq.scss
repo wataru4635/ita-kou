@@ -1,0 +1,129 @@
+@use "../global" as *;
+
+/* ===============================================
+# recruitment-faq（よくある質問：Q/Aバッジ＋罫線リスト）
+=============================================== */
+.recruitment-faq {
+  padding-block: rem(60) rem(41);
+
+  @include mq("md") {
+    padding-block: rem(146) rem(84);
+  }
+}
+
+.recruitment-faq__inner {
+  max-width: rem(500);
+  margin-inline: auto;
+  padding-inline: var(--padding-inline);
+
+  @include mq("md") {
+    max-width: rem(1061);
+  }
+}
+
+.recruitment-faq__title {
+  color: var(--main-navy);
+  font-size: rem(18);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+
+  @include mq("md") {
+    font-size: rem(48);
+    text-align: center;
+  }
+}
+
+.recruitment-faq__list {
+  margin-top: rem(2);
+
+  @include mq("md") {
+    margin-top: rem(23);
+  }
+}
+
+/* 各Q&A */
+.faq {
+  padding-block: rem(22) rem(28);
+  border-bottom: 1px solid var(--black);
+
+  @include mq("md") {
+    padding-block: rem(42) rem(44);
+  }
+}
+
+.faq__q,
+.faq__a {
+  display: flex;
+  align-items: flex-start;
+}
+
+.faq__a {
+  margin-top: rem(7);
+
+  @include mq("md") {
+    margin-top: rem(11);
+  }
+}
+
+/* Q / A バッジ（正方形） */
+.faq__badge {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(21.73);
+  height: rem(21.73);
+  margin-right: rem(17);
+  color: var(--white);
+  font-size: rem(15);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+
+  @include mq("md") {
+    width: rem(33.55);
+    height: rem(33.55);
+    margin-right: rem(27);
+    font-size: rem(24);
+  }
+}
+
+.faq__badge--q {
+  background-color: var(--black);
+  padding-block: rem(2) rem(4);
+
+  @include mq("md") {
+    padding-block: rem(4) rem(8);
+  }
+}
+
+.faq__badge--a {
+  background-color: var(--main-navy);
+  padding-block: rem(4);
+
+  @include mq("md") {
+    padding-block: rem(6) rem(8);
+  }
+}
+
+/* 質問 / 回答 テキスト（バッジと縦中央そろえ） */
+.faq__question {
+  align-self: center;
+  font-size: rem(12);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+
+  @include mq("md") {
+    font-size: rem(18);
+  }
+}
+
+.faq__answer {
+  align-self: center;
+  font-size: rem(10);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}

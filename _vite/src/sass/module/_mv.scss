@@ -1,0 +1,236 @@
+@use "../global" as *;
+
+/* ===============================================
+# MV（全画面スライダー / 黒35%オーバーレイ / 縦書きキャッチ）
+=============================================== */
+.mv {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  min-height: rem(640);
+  overflow: hidden;
+  @include mq("md") {
+    min-height: rem(740);
+  }
+}
+
+/* スライダー */
+.mv__slider {
+  height: 100%;
+}
+
+.mv__slider .swiper-wrapper,
+.mv__slider .swiper-slide {
+  height: 100%;
+}
+
+.mv__slider .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 44%;
+}
+
+/* Ken Burns：アクティブスライドの画像をゆっくり拡大 */
+.mv__slider .swiper-slide-active img,
+.mv__slider .swiper-slide-duplicate-active img,
+.mv__slider .swiper-slide-prev img {
+  animation: mv-zoom 8s linear 0s normal both;
+  transform-origin: left bottom;
+}
+
+@keyframes mv-zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* 黒オーバーレイ 35% */
+.mv__slider::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+/* コピー領域 */
+.mv__copy {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  padding-top: rem(90);
+
+  @include mq("md") {
+    display: block;
+    padding-top: 0;
+  }
+}
+
+/* SP: キャッチ(右) + 英字(左) を上端揃えで横並び */
+.mv__copy-row {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  gap: rem(10);
+
+  @include mq("md") {
+    display: contents;
+    gap: rem(22);
+  }
+}
+
+.mv__en-group {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: rem(5);
+
+  @include mq("md") {
+    display: contents;
+  }
+}
+
+/* 縦書きキャッチ */
+.mv__catch {
+  writing-mode: vertical-rl;
+  color: var(--white);
+  font-size: rem(33);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+
+  @include mq("md") {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    font-size: rem(52);
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* 英字 */
+.mv__en {
+  writing-mode: vertical-rl;
+  color: var(--white);
+  font-size: rem(15);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+
+  @include mq("md") {
+    position: absolute;
+    top: 52%;
+    writing-mode: horizontal-tb;
+    font-size: rem(25);
+    transform: translateY(-50%);
+  }
+}
+
+.mv__en--left {
+  @include mq("md") {
+    right: calc(50% + rem(120));
+    text-align: right;
+  }
+}
+
+.mv__en--right {
+  @include mq("md") {
+    left: calc(50% + rem(120));
+  }
+}
+
+/* ページネーション（SP: 中央下 / PC: 左下・アクティブ黄） */
+.mv__pagination.swiper-pagination {
+  --swiper-pagination-bullet-horizontal-gap: 0;
+  position: absolute;
+  bottom: rem(44);
+  left: 50%;
+  z-index: 4;
+  display: flex;
+  gap: rem(15);
+  width: auto;
+  transform: translateX(-50%);
+
+  @include mq("md") {
+    bottom: rem(30);
+    left: rem(74);
+    transform: none;
+  }
+}
+
+.mv__pagination .swiper-pagination-bullet {
+  width: rem(8);
+  height: rem(8);
+  margin: 0;
+  background-color: var(--white);
+  opacity: 1;
+}
+
+.mv__pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-yellow);
+}
+
+/* スクロールダウン（高圧フランジ準拠・右下） */
+.mv__scroll {
+  position: absolute;
+  right: rem(16);
+  bottom: rem(40);
+  z-index: 4;
+  padding-bottom: rem(60);
+  writing-mode: vertical-rl;
+  color: var(--white);
+  font-size: rem(12);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  @include mq("md") {
+    right: rem(30);
+    bottom: rem(60);
+    padding-bottom: rem(80);
+    font-size: rem(16);
+  }
+}
+
+.mv__scroll::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  height: rem(50);
+  background-color: var(--white);
+  animation: mv-scroll 2s infinite;
+
+  @include mq("md") {
+    height: rem(70);
+  }
+}
+
+@keyframes mv-scroll {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  50.1% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+  }
+}

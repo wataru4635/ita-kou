@@ -1,0 +1,54 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -f \"$CLAUDE_PROJECT_DIR/.rule-inject-disabled\" ] || cat \"$CLAUDE_PROJECT_DIR/CLAUDE-CRITICAL.md\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'コンパクト化前にMCPツール get_compact_rules を mode=xd で呼び出してルールを確認してください'",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/review-gate.sh",
+            "timeout": 5,
+            "statusMessage": "レビュー完了チェック中..."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/completion-gate.sh",
+            "timeout": 10,
+            "statusMessage": "パイプライン完了チェック中..."
+          }
+        ]
+      }
+    ]
+  }
+}

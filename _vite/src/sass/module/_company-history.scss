@@ -1,0 +1,73 @@
+@use "../global" as *;
+
+/* ===============================================
+# company-history（沿革：年表 年｜月｜出来事）
+=============================================== */
+.company-history {
+  padding-block: rem(32) rem(46);
+
+  @include mq("md") {
+    padding-block: rem(36) rem(123);
+  }
+}
+
+.company-history__inner {
+  max-width: rem(500);
+  margin-inline: auto;
+  padding-inline: var(--padding-inline);
+
+  @include mq("md") {
+    max-width: rem(1262);
+  }
+}
+
+.company-history__title {
+  color: var(--main-navy);
+  font-size: rem(18);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+
+  @include mq("md") {
+    font-size: rem(36);
+  }
+}
+
+.company-history__list {
+  margin-top: rem(24);
+
+  @include mq("md") {
+    margin-top: rem(31);
+  }
+}
+
+/* 各行（年｜月｜出来事） */
+.history-row {
+  display: grid;
+  grid-template-columns: rem(62) rem(36) 1fr;
+  align-items: start;
+  padding-block: rem(25);
+  border-top: 1px solid var(--gray);
+
+  @include mq("md") {
+    grid-template-columns: rem(85) rem(87) 1fr;
+    align-items: center;
+    min-height: rem(82);
+    padding-block: rem(16);
+  }
+}
+
+.history-row:last-child {
+  border-bottom: 1px solid var(--gray);
+}
+
+.history-row__year,
+.history-row__month,
+.history-row__event {
+  font-size: rem(12);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+
+  @include mq("md") {
+    font-size: rem(13.3);
+  }
+}

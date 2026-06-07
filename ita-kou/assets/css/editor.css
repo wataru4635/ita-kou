@@ -1,0 +1,37 @@
+:root {
+  --font-family-second: "Noto Serif JP", "Noto Serif", serif;
+}
+
+.editor-styles-wrapper .is-noto-serif-jp {
+  font-family: var(--font-family-second);
+}
+
+@media (max-width: 767px) {
+  .editor-styles-wrapper .has-panoramanoyu-sp-font-size {
+    font-size: var(--panoramanoyu-sp-font-size);
+  }
+}
+
+.editor-styles-wrapper h2 {
+  font-size: 32px;
+  margin-top: 20px;
+}
+.editor-styles-wrapper h3 {
+  font-size: 29px;
+  margin-top: 20px;
+}
+
+.editor-styles-wrapper h4 {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.editor-styles-wrapper h5 {
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.editor-styles-wrapper p {
+  font-size: 16px;
+  margin-top: 20px;
+}

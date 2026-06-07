@@ -1,0 +1,40 @@
+- generic [active]:
+  - banner [ref=e1]:
+    - generic [ref=e2]:
+      - heading "有限会社 板岡工作所" [level=1] [ref=e3]:
+        - link "有限会社 板岡工作所" [ref=e4] [cursor=pointer]:
+          - /url: http://ita-kou.localtest/
+          - img "有限会社 板岡工作所" [ref=e5]
+      - navigation "グローバルナビゲーション" [ref=e6]:
+        - list [ref=e7]:
+          - listitem [ref=e8]:
+            - link "TOP" [ref=e9] [cursor=pointer]:
+              - /url: http://ita-kou.localtest/
+              - generic [ref=e10]: TOP
+          - listitem [ref=e11]:
+            - link "業務内容 SERVICES" [ref=e12] [cursor=pointer]:
+              - /url: http://ita-kou.localtest/services/
+              - generic [ref=e13]: 業務内容
+              - generic [ref=e14]: SERVICES
+          - listitem [ref=e15]:
+            - link "設備紹介 FACILITIES" [ref=e16] [cursor=pointer]:
+              - /url: http://ita-kou.localtest/facilities/
+              - generic [ref=e17]: 設備紹介
+              - generic [ref=e18]: FACILITIES
+          - listitem [ref=e19]:
+            - link "会社情報 COMPANY" [ref=e20] [cursor=pointer]:
+              - /url: http://ita-kou.localtest/company/
+              - generic [ref=e21]: 会社情報
+              - generic [ref=e22]: COMPANY
+          - listitem [ref=e23]:
+            - link "採用情報 RECRUITMENT" [ref=e24] [cursor=pointer]:
+              - /url: http://ita-kou.localtest/recruitment/
+              - generic [ref=e25]: 採用情報
+              - generic [ref=e26]: RECRUITMENT
+          - listitem [ref=e27]:
+            - link "お問い合わせ CONTACT" [ref=e28] [cursor=pointer]:
+              - /url: http://ita-kou.localtest/contact/
+              - generic [ref=e29]: お問い合わせ
+              - generic [ref=e30]: CONTACT
+  - main
+  - contentinfo

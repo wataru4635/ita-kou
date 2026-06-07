@@ -1,0 +1,149 @@
+@use "../global" as *;
+
+/* ===============================================
+# company-profile（会社概要：PC2カラム表 / SP1カラム縦積み）
+=============================================== */
+.company-profile {
+  padding-block: rem(40) rem(40);
+
+  @include mq("md") {
+    padding-block: rem(50) rem(43);
+  }
+}
+
+.company-profile__inner {
+  max-width: rem(500);
+  margin-inline: auto;
+  padding-inline: var(--padding-inline);
+
+  @include mq("md") {
+    max-width: rem(1262);
+  }
+}
+
+.company-profile__title {
+  color: var(--main-navy);
+  font-size: rem(18);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+
+  @include mq("md") {
+    font-size: rem(36);
+  }
+}
+
+/* 表：SP=1カラム縦積み（左dl→右dl）/ PC=2カラム（行を揃える subgrid） */
+.company-profile__table {
+  margin-top: rem(20);
+
+  @include mq("md") {
+    margin-top: rem(31);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:
+      minmax(rem(82), auto)
+      minmax(rem(82), auto)
+      minmax(rem(81), auto)
+      minmax(rem(125), auto);
+    grid-auto-rows: minmax(rem(82), auto);
+    column-gap: rem(74);
+  }
+}
+
+.company-profile__col {
+  @include mq("md") {
+    display: grid;
+    grid-row: 1 / -1;
+    grid-template-rows: subgrid;
+  }
+}
+
+.company-profile__col--right {
+  @include mq("md") {
+    grid-column: 2;
+  }
+}
+
+/* 各行（用語＋説明） */
+.profile-row {
+  display: grid;
+  grid-template-columns: rem(69) 1fr;
+  align-items: start;
+  padding-block: rem(20);
+  border-top: 1px solid var(--gray);
+
+  @include mq("md") {
+    grid-template-columns: rem(135) 1fr;
+    padding-block: rem(28) rem(16);
+  }
+}
+
+/* 複数行セル（住所・主な取引先）は上寄せ余白を小さく（下余白は確保） */
+.profile-row--address,
+.profile-row--clients {
+  @include mq("md") {
+    padding-block: rem(18) rem(16);
+  }
+}
+
+/* 住所は2行トラック分の高さを占有（本社／工場） */
+.profile-row--address {
+  @include mq("md") {
+    grid-row: span 2;
+  }
+}
+
+/* 罫線（下端） */
+.company-profile__col--right .profile-row:last-child {
+  border-bottom: 1px solid var(--gray);
+}
+
+.company-profile__col--left .profile-row:last-child {
+  @include mq("md") {
+    border-bottom: 1px solid var(--gray);
+  }
+}
+
+.profile-row__term {
+  font-size: rem(12);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.79;
+
+  @include mq("md") {
+    font-size: rem(14);
+  }
+}
+
+.profile-row__desc {
+  font-size: rem(12);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.79;
+
+  @include mq("md") {
+    font-size: rem(14);
+  }
+}
+
+/* 住所セル内：本社／工場をラベル左｜詳細右で分割（間に区切り線） */
+.profile-address__row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: rem(14);
+}
+
+.profile-address__row + .profile-address__row {
+  margin-top: rem(16);
+  padding-top: rem(16);
+  border-top: 1px solid var(--gray);
+}
+
+.profile-address__label,
+.profile-address__detail {
+  font-size: rem(12);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.79;
+
+  @include mq("md") {
+    font-size: rem(14);
+  }
+}

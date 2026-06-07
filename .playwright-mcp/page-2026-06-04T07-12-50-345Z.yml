@@ -1,0 +1,54 @@
+- generic:
+  - banner [ref=e1]:
+    - generic [ref=e2]:
+      - heading "有限会社 板岡工作所" [level=1] [ref=e3]:
+        - link "有限会社 板岡工作所" [ref=e4] [cursor=pointer]:
+          - /url: http://ita-kou.localtest/
+          - img "有限会社 板岡工作所" [ref=e5]
+      - button "メニューを閉じる" [expanded] [active] [ref=e34] [cursor=pointer]
+      - navigation "モバイルナビゲーション" [ref=e36]:
+        - list [ref=e37]:
+          - listitem [ref=e38]:
+            - link "トップページ TOP" [ref=e39] [cursor=pointer]:
+              - /url: http://ita-kou.localtest/
+              - generic [ref=e40]:
+                - text: トップページ
+                - generic [ref=e41]: TOP
+          - listitem [ref=e43]:
+            - link "業務内容 SERVICES" [ref=e44] [cursor=pointer]:
+              - /url: http://ita-kou.localtest/services/
+              - generic [ref=e45]:
+                - text: 業務内容
+                - generic [ref=e46]: SERVICES
+          - listitem [ref=e48]:
+            - link "設備紹介 FACILITIES" [ref=e49] [cursor=pointer]:
+              - /url: http://ita-kou.localtest/facilities/
+              - generic [ref=e50]:
+                - text: 設備紹介
+                - generic [ref=e51]: FACILITIES
+          - listitem [ref=e53]:
+            - link "会社情報 COMPANY" [ref=e54] [cursor=pointer]:
+              - /url: http://ita-kou.localtest/company/
+              - generic [ref=e55]:
+                - text: 会社情報
+                - generic [ref=e56]: COMPANY
+          - listitem [ref=e58]:
+            - link "採用情報 RECRUITMENT" [ref=e59] [cursor=pointer]:
+              - /url: http://ita-kou.localtest/recruitment/
+              - generic [ref=e60]:
+                - text: 採用情報
+                - generic [ref=e61]: RECRUITMENT
+          - listitem [ref=e63]:
+            - link "お問い合わせ CONTACT" [ref=e64] [cursor=pointer]:
+              - /url: http://ita-kou.localtest/contact/
+              - generic [ref=e65]:
+                - text: お問い合わせ
+                - generic [ref=e66]: CONTACT
+          - listitem [ref=e68]:
+            - link "プライバシーポリシー PRIVACY POLICY" [ref=e69] [cursor=pointer]:
+              - /url: http://ita-kou.localtest/privacy-policy/
+              - generic [ref=e70]:
+                - text: プライバシーポリシー
+                - generic [ref=e71]: PRIVACY POLICY
+  - main
+  - contentinfo

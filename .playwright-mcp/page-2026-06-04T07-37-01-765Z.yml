@@ -1,0 +1,22 @@
+- generic:
+  - banner [ref=e1]:
+    - generic [ref=e2]:
+      - heading "有限会社 板岡工作所" [level=1] [ref=e3]:
+        - link "有限会社 板岡工作所" [ref=e4] [cursor=pointer]:
+          - /url: http://ita-kou.localtest/
+          - img "有限会社 板岡工作所" [ref=e5]
+      - button "メニューを閉じる" [expanded] [active] [ref=e9] [cursor=pointer]
+      - generic [ref=e10]:
+        - button "メニューを閉じる" [ref=e13] [cursor=pointer]
+        - navigation "モバイルナビゲーション" [ref=e14]:
+          - list [ref=e15]:
+            - listitem [ref=e16]
+            - listitem [ref=e17]
+            - listitem [ref=e18]
+            - listitem [ref=e19]
+            - listitem [ref=e20]
+            - listitem [ref=e21]
+            - listitem [ref=e22]
+        - paragraph [ref=e23]: Copyright © ITAOKA KOSAKUSHO CO., LTD.
+  - main
+  - contentinfo

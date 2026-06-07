@@ -1,0 +1,119 @@
+@use "../global" as *;
+
+/* ===============================================
+# company-greeting（代表挨拶：左テキスト＋右画像 / SPは縦積み）
+# 画像は拡大せず（rem固定）デザイン位置のまま（inner max-width1440 中央寄せ）
+=============================================== */
+.company-greeting {
+  overflow: hidden;
+  padding-block: rem(60) rem(40);
+
+  @include mq("md") {
+    padding-block: rem(171) rem(57);
+  }
+}
+
+.company-greeting__inner {
+  max-width: rem(500);
+  margin-inline: auto;
+  padding-inline: var(--padding-inline);
+
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: 1fr rem(680);
+    column-gap: rem(80);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "head image"
+      "body image";
+    align-items: start;
+    max-width: rem(1440);
+    padding-inline: rem(35) 0;
+  }
+}
+
+/* 代表挨拶（見出し） */
+.company-greeting__head {
+  @include mq("md") {
+    max-width: rem(546);
+    width: 100%;
+    margin-left: auto;
+    grid-area: head;
+    margin-bottom: rem(78);
+  }
+}
+
+.company-greeting__label {
+  color: var(--main-navy);
+  font-size: rem(18);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+
+  @include mq("md") {
+    font-size: rem(36);
+  }
+}
+
+/* 画像（拡大しない固定サイズ・右寄せ） */
+.company-greeting__image {
+  margin-top: rem(43);
+
+  @include mq("md") {
+    grid-area: image;
+    margin-top: rem(19);
+  }
+}
+
+.company-greeting__image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 680 / 662;
+  object-fit: cover;
+}
+
+/* 本文ブロック */
+.company-greeting__body {
+  margin-top: rem(30);
+
+  @include mq("md") {
+    max-width: rem(546);
+    grid-area: body;
+    margin-top: 0;
+    margin-left: auto;
+  }
+}
+
+.company-greeting__title {
+  font-size: rem(14);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.6;
+
+  @include mq("md") {
+    font-size: rem(22);
+  }
+}
+
+.company-greeting__text {
+  margin-top: rem(14);
+  font-size: rem(12);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.83;
+
+  @include mq("md") {
+    margin-top: rem(32);
+    font-size: rem(14);
+    line-height: 2.21;
+  }
+}
+
+.company-greeting__name {
+  margin-top: rem(10);
+  font-size: rem(12);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.75;
+
+  @include mq("md") {
+    margin-top: rem(10);
+    font-size: rem(16);
+  }
+}
