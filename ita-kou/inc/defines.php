@@ -17,6 +17,6 @@ define('CONTACT_THANKS_URL',   esc_url(home_url('/contact-thanks/')));          
 define('PRIVACY_POLICY_URL',   esc_url(home_url('/privacy-policy/')));           // プライバシーポリシー
 
 /* ---------- メール設定 ---------- */
-define('ADMIN_CONTACT_EMAIL',  'itaoka-kousakusyo@mbh.nifty.com');   // 管理者受信用メールアドレス
-define('REPLY_EMAIL',          'itaoka-kousakusyo@mbh.nifty.com');   // 自動返信送信元メールアドレス
+define('ADMIN_CONTACT_EMAIL',  'itaoka-kousakusyo@mbh.nifty.com');   // 管理者受信用・返信先（Reply-To）メールアドレス
+define('FROM_EMAIL',           'info@ita-kou.com');                  // メール送信元（From）アドレス
 define('SITE_NAME',            '有限会社 板岡工作所');             // サイト名（送信者名／メールタイトル等で利用）

@@ -76,25 +76,34 @@
   }
 }
 
-/* メイン画像枠（contain・上下余白で余白感を統一） */
+/* メイン画像枠（枠は aspect-ratio で高さ固定・画像は contain） */
 .facility__main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   aspect-ratio: 315 / 240;
-  padding-block: rem(25);
-  padding-inline: rem(25);
   border: 1px solid var(--ink);
 
   @include mq("md") {
     aspect-ratio: 1002 / 665;
+  }
+}
+
+.facility__main-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding-block: rem(25);
+  padding-inline: rem(25);
+  object-fit: contain;
+
+  @include mq("md") {
     padding-block: rem(52);
     padding-inline: rem(40);
   }
 }
 
 /* 白背景画像は上下余白を狭く（少し大きく見せる） */
-.facility__main.is-white {
+.facility__main.is-white .facility__main-img {
   padding-block: rem(16);
 
   @include mq("md") {
@@ -102,18 +111,10 @@
   }
 }
 
-.facility__main-img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
 /* サムネ（3列グリッド） */
 .facility__thumbs {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: rem(8);
   margin-top: rem(16);
 
@@ -123,18 +124,14 @@
 }
 
 .facility__thumb {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   aspect-ratio: 100 / 76;
-  padding: rem(6);
   border: 1px solid var(--ink);
   cursor: pointer;
   transition: border-color var(--duration-base);
 
   @include mq("md") {
     aspect-ratio: 325 / 210;
-    padding: rem(20);
   }
 }
 
@@ -148,11 +145,16 @@
 }
 
 .facility__thumb img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: rem(6);
   object-fit: contain;
+
+  @include mq("md") {
+    padding: rem(20);
+  }
 }
 
 /* 画像なし設備リスト（09-11） */

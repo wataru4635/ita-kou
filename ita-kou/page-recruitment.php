@@ -17,7 +17,7 @@
     <div class="sub-mv__image">
       <picture>
         <source srcset="<?php echo IMAGEPATH; ?>/recruitment/recruitment-mv_sp.webp" media="(max-width: 767px)">
-        <img src="<?php echo IMAGEPATH; ?>/recruitment/recruitment-mv.webp" alt="" width="2880" height="1093" class="sub-mv__image-img" fetchpriority="high">
+        <img src="<?php echo IMAGEPATH; ?>/recruitment/recruitment-mv.webp" alt="工場でNC旋盤を操作する作業者" width="2880" height="1093" class="sub-mv__image-img" fetchpriority="high">
       </picture>
     </div>
   </section>
@@ -100,7 +100,7 @@
           </div>
           <div class="guideline-row">
             <dt class="guideline-row__term">給与</dt>
-            <dd class="guideline-row__desc">月給202,700円～258,000円(定額諸手当含む) ※年齢・経験による<br>昇給有/賞与年2回</dd>
+            <dd class="guideline-row__desc">月給202,700円～258,000円(定額諸手当別) ※年齢・経験による<br>昇給有/賞与年2回</dd>
           </div>
           <div class="guideline-row">
             <dt class="guideline-row__term">勤務場所</dt>

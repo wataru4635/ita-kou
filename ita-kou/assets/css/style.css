@@ -755,40 +755,35 @@ button{
   margin-top:1.25rem;
 }
 .facility__main{
-  align-items:center;
   aspect-ratio:315/240;
   border:1px solid var(--ink);
-  display:flex;
-  justify-content:center;
-  padding-block:1.5625rem;
-  padding-inline:1.5625rem;
-}
-.facility__main.is-white{
-  padding-block:1rem;
+  position:relative;
 }
 
 .facility__main-img{
-  height:auto;
-  max-height:100%;
-  max-width:100%;
+  height:100%;
+  inset:0;
   object-fit:contain;
-  width:auto;
+  padding-block:1.5625rem;
+  padding-inline:1.5625rem;
+  position:absolute;
+  width:100%;
+}
+.facility__main.is-white .facility__main-img{
+  padding-block:1rem;
 }
 .facility__thumbs{
   display:grid;
   gap:0.5rem;
-  grid-template-columns:repeat(3, 1fr);
+  grid-template-columns:repeat(3, minmax(0, 1fr));
   margin-top:1rem;
 }
 
 .facility__thumb{
-  align-items:center;
   aspect-ratio:100/76;
   border:1px solid var(--ink);
   cursor:pointer;
-  display:flex;
-  justify-content:center;
-  padding:0.375rem;
+  position:relative;
   transition:border-color var(--duration-base);
 }
 .facility__thumb.is-active{
@@ -796,11 +791,12 @@ button{
 }
 
 .facility__thumb img{
-  height:auto;
-  max-height:100%;
-  max-width:100%;
+  height:100%;
+  inset:0;
   object-fit:contain;
-  width:auto;
+  padding:0.375rem;
+  position:absolute;
+  width:100%;
 }
 .facility-list{
   border-top:1px solid var(--ink);
@@ -1557,7 +1553,7 @@ button{
 .js-fade-up{
   opacity:0;
   transition:opacity var(--duration-scroll) ease-in-out, translate var(--duration-scroll) ease-in-out;
-  translate:0 20px;
+  translate:0 10px;
 }
 .js-fade-up.is-active{
   opacity:1;
@@ -2358,6 +2354,7 @@ button{
   }
 
   .company-philosophy{
+    background-color:var(--white);
     padding-block:3.75rem 3.4375rem;
   }
 
@@ -2746,11 +2743,14 @@ button{
 
   .facility__main{
     aspect-ratio:1002/665;
+  }
+
+  .facility__main-img{
     padding-block:3.25rem;
     padding-inline:2.5rem;
   }
 
-  .facility__main.is-white{
+  .facility__main.is-white .facility__main-img{
     padding-block:2rem;
   }
 
@@ -2760,11 +2760,14 @@ button{
 
   .facility__thumb{
     aspect-ratio:325/210;
-    padding:1.25rem;
   }
 
   .facility__thumb.is-active{
     border-width:4px;
+  }
+
+  .facility__thumb img{
+    padding:1.25rem;
   }
 
   .facility-list{
@@ -3297,6 +3300,10 @@ button{
 
   .top-slogan__image:not(:first-child){
     margin-top:0;
+  }
+
+  .js-fade-up{
+    translate:0 20px;
   }
 
   .js-slide-right{

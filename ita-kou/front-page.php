@@ -49,7 +49,7 @@
   <section class="top-slogan">
     <picture class="top-slogan__bg">
       <source srcset="<?php echo IMAGEPATH; ?>/top/top-slogan-bg_sp.webp" media="(max-width: 767px)">
-      <img src="<?php echo IMAGEPATH; ?>/top/top-slogan-bg.webp" alt="" class="top-slogan__bg-img" loading="lazy">
+      <img src="<?php echo IMAGEPATH; ?>/top/top-slogan-bg.webp" alt="汎用旋盤で金属部品を加工する職人" class="top-slogan__bg-img" loading="lazy">
     </picture>
     <div class="top-slogan__inner">
       <div class="top-slogan__title js-fade-up">
@@ -104,7 +104,7 @@
   <section class="top-equipment">
     <picture class="top-equipment__bg">
       <source srcset="<?php echo IMAGEPATH; ?>/top/top-equipment-bg_sp.webp" media="(max-width: 767px)">
-      <img src="<?php echo IMAGEPATH; ?>/top/top-equipment-bg.webp" alt="" class="top-equipment__bg-img" loading="lazy">
+      <img src="<?php echo IMAGEPATH; ?>/top/top-equipment-bg.webp" alt="天井クレーンを備えた工場内に並ぶ工作機械" class="top-equipment__bg-img" loading="lazy">
     </picture>
     <div class="top-equipment__inner">
       <div class="top-equipment__head">
@@ -136,7 +136,7 @@
     <ul class="page-links__list">
       <li class="page-links__item">
         <a href="<?php echo COMPANY_URL; ?>" class="page-links__card">
-          <img src="<?php echo IMAGEPATH; ?>/common/page-links-company-bg.webp" alt="" class="page-links__bg" loading="lazy">
+          <img src="<?php echo IMAGEPATH; ?>/common/page-links-company-bg.webp" alt="「有限会社 板岡工作所」の社屋外観" class="page-links__bg" loading="lazy">
           <div class="page-links__content">
             <p class="page-links__title">会社情報<span class="page-links__en">COMPANY</span></p>
             <span class="button page-links__btn">
@@ -148,7 +148,7 @@
       </li>
       <li class="page-links__item">
         <a href="<?php echo RECRUITMENT_URL; ?>" class="page-links__card">
-          <img src="<?php echo IMAGEPATH; ?>/common/page-links-recruitment-bg.webp" alt="" class="page-links__bg" loading="lazy">
+          <img src="<?php echo IMAGEPATH; ?>/common/page-links-recruitment-bg.webp" alt="作業台に並んだマイクロメーターなどの精密測定器" class="page-links__bg" loading="lazy">
           <div class="page-links__content">
             <p class="page-links__title">採用情報<span class="page-links__en">RECRUITMENT</span></p>
             <span class="button page-links__btn">

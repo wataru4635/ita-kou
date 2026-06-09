@@ -17,7 +17,7 @@
     <div class="sub-mv__image">
       <picture>
         <source srcset="<?php echo IMAGEPATH; ?>/company/company-mv_sp.webp" media="(max-width: 767px)">
-        <img src="<?php echo IMAGEPATH; ?>/company/company-mv.webp" alt="" width="2880" height="1093" class="sub-mv__image-img" fetchpriority="high">
+        <img src="<?php echo IMAGEPATH; ?>/company/company-mv.webp" alt="「有限会社 板岡工作所」の看板が掲げられた社屋の外観" width="2880" height="1093" class="sub-mv__image-img" fetchpriority="high">
       </picture>
     </div>
   </section>
@@ -89,11 +89,11 @@
               <div class="profile-address">
                 <div class="profile-address__row">
                   <span class="profile-address__label">本社</span>
-                  <span class="profile-address__detail">〒651-2114 兵庫県神戸市西区今寺 36-11<br>TEL（078）975-2023　FAX（078）975-3063</span>
+                  <span class="profile-address__detail">〒651-2114 <br class="u-mobile-inline">兵庫県神戸市西区今寺 36-11<br>TEL（078）975-2023　<br class="u-mobile-inline">FAX（078）975-3063</span>
                 </div>
                 <div class="profile-address__row">
                   <span class="profile-address__label">工場</span>
-                  <span class="profile-address__detail">〒651-2124 兵庫県神戸市西区伊川谷町潤和 997-5<br>TEL（078）975-7557　FAX（078）975-7527</span>
+                  <span class="profile-address__detail">〒651-2124 <br class="u-mobile-inline">兵庫県神戸市西区伊川谷町潤和 997-5<br>TEL（078）975-7557　<br class="u-mobile-inline">FAX（078）975-7527</span>
                 </div>
               </div>
             </dd>
@@ -128,7 +128,7 @@
         <div class="history-row">
           <span class="history-row__year">昭和52年</span>
           <span class="history-row__month">1月</span>
-          <p class="history-row__event">板岡工作所創立（兵庫県神戸市東灘区魚崎南町2丁目）<br>原子力発電所向けポンプ部品の製造からスタート</p>
+          <p class="history-row__event">板岡工作所創立<br class="u-mobile-inline">（兵庫県神戸市東灘区魚崎南町2丁目）<br>原子力発電所向けポンプ部品の<br class="u-mobile-inline">製造からスタート</p>
         </div>
         <div class="history-row">
           <span class="history-row__year">平成5年</span>

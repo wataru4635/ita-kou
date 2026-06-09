@@ -17,63 +17,194 @@
     <div class="sub-mv__image">
       <picture>
         <source srcset="<?php echo IMAGEPATH; ?>/facilities/facilities-mv_sp.webp" media="(max-width: 767px)">
-        <img src="<?php echo IMAGEPATH; ?>/facilities/facilities-mv.webp" alt="" width="2880" height="1093" class="sub-mv__image-img" fetchpriority="high">
+        <img src="<?php echo IMAGEPATH; ?>/facilities/facilities-mv.webp" alt="工場内に並ぶオークマ製の工作機械" width="2880" height="1093" class="sub-mv__image-img" fetchpriority="high">
       </picture>
     </div>
   </section>
 
-  <?php
-  $fac_dir = IMAGEPATH . '/facilities/';
-  $facilities = [
-    ['no' => '01', 'name' => 'オークマV920EX', 'size' => '', 'images' => [['facilities01_01', true], ['facilities01_02', false]]],
-    ['no' => '02', 'name' => 'MULTUS B300II', 'size' => '', 'images' => [['facilities02_01', true], ['facilities02_02', false]]],
-    ['no' => '03', 'name' => 'オークマLB3000EX（複合機）', 'size' => '', 'images' => [['facilities03_01', false]]],
-    ['no' => '04', 'name' => 'オークマMB-66VB（マシニングセンター）', 'size' => '', 'images' => [['facilities04_02', false], ['facilities04_03', false]]],
-    ['no' => '05', 'name' => 'オークマLB35II-M（複合機）', 'size' => '460φ×2000L', 'images' => [['facilities05_01', false], ['facilities05_02', false]]],
-    ['no' => '06', 'name' => 'オークマLB4000EX（複合機）', 'size' => '480φ×1500L', 'images' => [['facilities06_01', false], ['facilities06_02', false], ['facilities06_03', false]]],
-    ['no' => '07', 'name' => 'オークマLH35N', 'size' => '610φ×2000L', 'images' => [['facilities07_01', false], ['facilities07_02', false], ['facilities07_03', false]]],
-    ['no' => '08', 'name' => 'オークマLB300M（複合機）', 'size' => '340φ×1000L', 'images' => [['facilities08_01', false]]],
-  ];
-  $facilities_text = [
-    ['no' => '09', 'name' => '池貝A25旋盤（500φ×1500L）'],
-    ['no' => '10', 'name' => '池貝A20旋盤（500φ×1100L）'],
-    ['no' => '11', 'name' => '鋸盤'],
-  ];
-  ?>
   <section class="facilities">
     <div class="facilities__inner">
 
-      <?php foreach ($facilities as $f) :
-        $first = $f['images'][0];
-      ?>
-        <div class="facility">
-          <div class="facility__head">
-            <p class="facility__label">FACILITIES <?php echo esc_html($f['no']); ?></p>
-            <h2 class="facility__name"><?php echo esc_html($f['name']); ?></h2>
-            <?php if ($f['size']) : ?><p class="facility__size"><?php echo esc_html($f['size']); ?></p><?php endif; ?>
-          </div>
-          <div class="facility__gallery">
-            <div class="facility__main<?php echo $first[1] ? ' is-white' : ''; ?>">
-              <img src="<?php echo $fac_dir . $first[0]; ?>.webp" alt="<?php echo esc_attr($f['name']); ?>" class="facility__main-img" loading="lazy">
-            </div>
-            <ul class="facility__thumbs">
-              <?php foreach ($f['images'] as $i => $img) : ?>
-                <li class="facility__thumb<?php echo $i === 0 ? ' is-active' : ''; ?>" data-src="<?php echo $fac_dir . $img[0]; ?>.webp" data-white="<?php echo $img[1] ? '1' : '0'; ?>">
-                  <img src="<?php echo $fac_dir . $img[0]; ?>.webp" alt="" loading="lazy">
-                </li>
-              <?php endforeach; ?>
-            </ul>
-          </div>
+      <div class="facility">
+        <div class="facility__head">
+          <p class="facility__label">FACILITIES 01</p>
+          <h2 class="facility__name">オークマV920EX</h2>
         </div>
-      <?php endforeach; ?>
+        <div class="facility__gallery">
+          <div class="facility__main is-white">
+            <img src="<?php echo IMAGEPATH; ?>/facilities/facilities01_01.webp" alt="オークマV920EX" class="facility__main-img" loading="lazy">
+          </div>
+          <ul class="facility__thumbs">
+            <li class="facility__thumb is-active" data-src="<?php echo IMAGEPATH; ?>/facilities/facilities01_01.webp" data-white="1">
+              <img src="<?php echo IMAGEPATH; ?>/facilities/facilities01_01.webp" alt="オークマV920EX" loading="lazy">
+            </li>
+            <li class="facility__thumb" data-src="<?php echo IMAGEPATH; ?>/facilities/facilities01_02.webp" data-white="0">
+              <img src="<?php echo IMAGEPATH; ?>/facilities/facilities01_02.webp" alt="オークマV920EX" loading="lazy">
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="facility">
+        <div class="facility__head">
+          <p class="facility__label">FACILITIES 02</p>
+          <h2 class="facility__name">MULTUS B300II</h2>
+        </div>
+        <div class="facility__gallery">
+          <div class="facility__main is-white">
+            <img src="<?php echo IMAGEPATH; ?>/facilities/facilities02_01.webp" alt="MULTUS B300II" class="facility__main-img" loading="lazy">
+          </div>
+          <ul class="facility__thumbs">
+            <li class="facility__thumb is-active" data-src="<?php echo IMAGEPATH; ?>/facilities/facilities02_01.webp" data-white="1">
+              <img src="<?php echo IMAGEPATH; ?>/facilities/facilities02_01.webp" alt="MULTUS B300II" loading="lazy">
+            </li>
+            <li class="facility__thumb" data-src="<?php echo IMAGEPATH; ?>/facilities/facilities02_02.webp" data-white="0">
+              <img src="<?php echo IMAGEPATH; ?>/facilities/facilities02_02.webp" alt="MULTUS B300II" loading="lazy">
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="facility">
+        <div class="facility__head">
+          <p class="facility__label">FACILITIES 03</p>
+          <h2 class="facility__name">オークマLB3000EX（複合機）</h2>
+        </div>
+        <div class="facility__gallery">
+          <div class="facility__main">
+            <img src="<?php echo IMAGEPATH; ?>/facilities/facilities03_01.webp" alt="オークマLB3000EX（複合機）" class="facility__main-img" loading="lazy">
+          </div>
+          <ul class="facility__thumbs">
+            <li class="facility__thumb is-active" data-src="<?php echo IMAGEPATH; ?>/facilities/facilities03_01.webp" data-white="0">
+              <img src="<?php echo IMAGEPATH; ?>/facilities/facilities03_01.webp" alt="オークマLB3000EX（複合機）" loading="lazy">
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="facility">
+        <div class="facility__head">
+          <p class="facility__label">FACILITIES 04</p>
+          <h2 class="facility__name">オークマMB-66VB（マシニングセンター）</h2>
+        </div>
+        <div class="facility__gallery">
+          <div class="facility__main is-white">
+            <img src="<?php echo IMAGEPATH; ?>/facilities/facilities04_01.webp" alt="オークマMB-66VB（マシニングセンター）" class="facility__main-img" loading="lazy">
+          </div>
+          <ul class="facility__thumbs">
+            <li class="facility__thumb is-active" data-src="<?php echo IMAGEPATH; ?>/facilities/facilities04_01.webp" data-white="1">
+              <img src="<?php echo IMAGEPATH; ?>/facilities/facilities04_01.webp" alt="オークマMB-66VB（マシニングセンター）" loading="lazy">
+            </li>
+            <li class="facility__thumb" data-src="<?php echo IMAGEPATH; ?>/facilities/facilities04_02.webp" data-white="0">
+              <img src="<?php echo IMAGEPATH; ?>/facilities/facilities04_02.webp" alt="オークマMB-66VB（マシニングセンター）" loading="lazy">
+            </li>
+            <li class="facility__thumb" data-src="<?php echo IMAGEPATH; ?>/facilities/facilities04_03.webp" data-white="0">
+              <img src="<?php echo IMAGEPATH; ?>/facilities/facilities04_03.webp" alt="オークマMB-66VB（マシニングセンター）" loading="lazy">
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="facility">
+        <div class="facility__head">
+          <p class="facility__label">FACILITIES 05</p>
+          <h2 class="facility__name">オークマLB35II-M（複合機）</h2>
+          <p class="facility__size">460φ×2000L</p>
+        </div>
+        <div class="facility__gallery">
+          <div class="facility__main">
+            <img src="<?php echo IMAGEPATH; ?>/facilities/facilities05_01.webp" alt="オークマLB35II-M（複合機）" class="facility__main-img" loading="lazy">
+          </div>
+          <ul class="facility__thumbs">
+            <li class="facility__thumb is-active" data-src="<?php echo IMAGEPATH; ?>/facilities/facilities05_01.webp" data-white="0">
+              <img src="<?php echo IMAGEPATH; ?>/facilities/facilities05_01.webp" alt="オークマLB35II-M（複合機）" loading="lazy">
+            </li>
+            <li class="facility__thumb" data-src="<?php echo IMAGEPATH; ?>/facilities/facilities05_02.webp" data-white="0">
+              <img src="<?php echo IMAGEPATH; ?>/facilities/facilities05_02.webp" alt="オークマLB35II-M（複合機）" loading="lazy">
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="facility">
+        <div class="facility__head">
+          <p class="facility__label">FACILITIES 06</p>
+          <h2 class="facility__name">オークマLB4000EX（複合機）</h2>
+          <p class="facility__size">480φ×1500L</p>
+        </div>
+        <div class="facility__gallery">
+          <div class="facility__main">
+            <img src="<?php echo IMAGEPATH; ?>/facilities/facilities06_01.webp" alt="オークマLB4000EX（複合機）" class="facility__main-img" loading="lazy">
+          </div>
+          <ul class="facility__thumbs">
+            <li class="facility__thumb is-active" data-src="<?php echo IMAGEPATH; ?>/facilities/facilities06_01.webp" data-white="0">
+              <img src="<?php echo IMAGEPATH; ?>/facilities/facilities06_01.webp" alt="オークマLB4000EX（複合機）" loading="lazy">
+            </li>
+            <li class="facility__thumb" data-src="<?php echo IMAGEPATH; ?>/facilities/facilities06_02.webp" data-white="0">
+              <img src="<?php echo IMAGEPATH; ?>/facilities/facilities06_02.webp" alt="オークマLB4000EX（複合機）" loading="lazy">
+            </li>
+            <li class="facility__thumb" data-src="<?php echo IMAGEPATH; ?>/facilities/facilities06_03.webp" data-white="0">
+              <img src="<?php echo IMAGEPATH; ?>/facilities/facilities06_03.webp" alt="オークマLB4000EX（複合機）" loading="lazy">
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="facility">
+        <div class="facility__head">
+          <p class="facility__label">FACILITIES 07</p>
+          <h2 class="facility__name">オークマLH35N</h2>
+          <p class="facility__size">610φ×2000L</p>
+        </div>
+        <div class="facility__gallery">
+          <div class="facility__main">
+            <img src="<?php echo IMAGEPATH; ?>/facilities/facilities07_01.webp" alt="オークマLH35N" class="facility__main-img" loading="lazy">
+          </div>
+          <ul class="facility__thumbs">
+            <li class="facility__thumb is-active" data-src="<?php echo IMAGEPATH; ?>/facilities/facilities07_01.webp" data-white="0">
+              <img src="<?php echo IMAGEPATH; ?>/facilities/facilities07_01.webp" alt="オークマLH35N" loading="lazy">
+            </li>
+            <li class="facility__thumb" data-src="<?php echo IMAGEPATH; ?>/facilities/facilities07_02.webp" data-white="0">
+              <img src="<?php echo IMAGEPATH; ?>/facilities/facilities07_02.webp" alt="オークマLH35N" loading="lazy">
+            </li>
+            <li class="facility__thumb" data-src="<?php echo IMAGEPATH; ?>/facilities/facilities07_03.webp" data-white="0">
+              <img src="<?php echo IMAGEPATH; ?>/facilities/facilities07_03.webp" alt="オークマLH35N" loading="lazy">
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="facility">
+        <div class="facility__head">
+          <p class="facility__label">FACILITIES 08</p>
+          <h2 class="facility__name">オークマLB300M（複合機）</h2>
+          <p class="facility__size">340φ×1000L</p>
+        </div>
+        <div class="facility__gallery">
+          <div class="facility__main">
+            <img src="<?php echo IMAGEPATH; ?>/facilities/facilities08_01.webp" alt="オークマLB300M（複合機）" class="facility__main-img" loading="lazy">
+          </div>
+          <ul class="facility__thumbs">
+            <li class="facility__thumb is-active" data-src="<?php echo IMAGEPATH; ?>/facilities/facilities08_01.webp" data-white="0">
+              <img src="<?php echo IMAGEPATH; ?>/facilities/facilities08_01.webp" alt="オークマLB300M（複合機）" loading="lazy">
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <ul class="facility-list">
-        <?php foreach ($facilities_text as $f) : ?>
-          <li class="facility-list__item">
-            <p class="facility__label">FACILITIES <?php echo esc_html($f['no']); ?></p>
-            <h2 class="facility__name"><?php echo esc_html($f['name']); ?></h2>
-          </li>
-        <?php endforeach; ?>
+        <li class="facility-list__item">
+          <p class="facility__label">FACILITIES 09</p>
+          <h2 class="facility__name">池貝 A25 旋盤（500φ×1500L）</h2>
+        </li>
+        <li class="facility-list__item">
+          <p class="facility__label">FACILITIES 10</p>
+          <h2 class="facility__name">池貝 A20 旋盤（500φ×1100L）</h2>
+        </li>
+        <li class="facility-list__item">
+          <p class="facility__label">FACILITIES 11</p>
+          <h2 class="facility__name">鋸盤</h2>
+        </li>
       </ul>
 
     </div>

@@ -55,8 +55,8 @@ if (!$valid) {
 }
 
 // メール送信
-itaoka_send_admin_email($data, ADMIN_CONTACT_EMAIL, SITE_NAME, REPLY_EMAIL);
-itaoka_send_auto_reply ($data, REPLY_EMAIL,         SITE_NAME, ADMIN_CONTACT_EMAIL);
+itaoka_send_admin_email($data, ADMIN_CONTACT_EMAIL, SITE_NAME, FROM_EMAIL);
+itaoka_send_auto_reply ($data, FROM_EMAIL,          SITE_NAME, ADMIN_CONTACT_EMAIL);
 
 // セッションをクリア（再送信防止・個人情報保持の最小化）
 unset($_SESSION['contact_data']);

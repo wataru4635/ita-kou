@@ -119,6 +119,15 @@ function add_block_editor_styles() {
 add_action( 'enqueue_block_editor_assets', 'add_block_editor_styles' );
 
 // ==========================================================================
+// メール送信元（Return-Path）を From と揃える（SPF/DMARC アライメント対策）
+// ==========================================================================
+add_action('phpmailer_init', function ($phpmailer) {
+    if (defined('FROM_EMAIL')) {
+        $phpmailer->Sender = FROM_EMAIL;
+    }
+});
+
+// ==========================================================================
 // 投稿数の変更
 // ==========================================================================
 function modify_posts_per_page($query) {

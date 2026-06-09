@@ -17,7 +17,7 @@
     <div class="sub-mv__image">
       <picture>
         <source srcset="<?php echo IMAGEPATH; ?>/services/services-mv_sp.webp" media="(max-width: 767px)">
-        <img src="<?php echo IMAGEPATH; ?>/services/services-mv.webp" alt="" width="2880" height="1093" class="sub-mv__image-img" fetchpriority="high">
+        <img src="<?php echo IMAGEPATH; ?>/services/services-mv.webp" alt="工場内で工作機械を操作する作業者" width="2880" height="1093" class="sub-mv__image-img" fetchpriority="high">
       </picture>
     </div>
   </section>

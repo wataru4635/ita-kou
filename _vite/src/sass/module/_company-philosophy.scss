@@ -10,6 +10,7 @@
 
   @include mq("md") {
     padding-block: rem(60) rem(55);
+    background-color: var(--white);
   }
 }
 
