@@ -7,12 +7,9 @@
       </a>
 
       <div class="footer__info">
-        <p class="footer__name">有限会社 板岡工作所</p>
-        <p class="footer__address">
-          〒651-2114 兵庫県神戸市西区今寺36-11
-          <a href="https://www.google.com/maps?q=兵庫県神戸市西区今寺36-11" class="footer__map" target="_blank"
-            rel="noopener">Google Map</a>
-        </p>
+        <p class="footer__address">本社　〒651-2114 兵庫県神戸市西区今寺36-11<br>工場　〒651-2124 兵庫県神戸市西区伊川谷町潤和 997-5</p>
+        <a href="https://maps.app.goo.gl/UQsTydJBx5pnhZ9AA" class="footer__map" target="_blank" rel="noopener">Google
+          Map</a>
       </div>
 
       <span class="footer__divider" aria-hidden="true"></span>
